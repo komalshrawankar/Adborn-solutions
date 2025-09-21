@@ -70,3 +70,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// about our-partner slider
+var swiper = new Swiper(".partner-swiper", {
+    slidesPerView: 5,     // 🔥 5 logos per row (desktop)
+    spaceBetween: 30,     // gap between cards
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      992: { slidesPerView: 5 }, // large screen
+      768: { slidesPerView: 3 }, // tablet
+      576: { slidesPerView: 2 }, // mobile
+    }
+  });
+
+   var swiper = new Swiper(".testimonial-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      992: { slidesPerView: 3 },
+      768: { slidesPerView: 2 },
+      576: { slidesPerView: 1 },
+    }
+  });
