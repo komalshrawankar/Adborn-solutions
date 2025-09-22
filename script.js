@@ -1,17 +1,18 @@
 // Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   // ===============================
-  // 1. Custom horizontal slider
+  // 1. Custom Horizontal Slider
   // ===============================
   const slider = document.getElementById("slider");
   if (slider) {
     let currentIndex = 0;
 
     function scrollSlider(direction) {
-      const cardWidth = slider.querySelector(".col-md-6").offsetWidth + 20; // Include gap
+      const cardWidth =
+        slider.querySelector(".col-md-6").offsetWidth + 20; // include gap
       currentIndex = Math.min(
         Math.max(currentIndex + direction, 0),
-        slider.children.length - 2 // Adjust for visible cards
+        slider.children.length - 2 // adjust for visible cards
       );
       slider.scrollTo({
         left: currentIndex * cardWidth,
@@ -27,8 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===============================
-  // 2. Home page Swiper (autoplay, pagination only)
+  // 2. Swipers
   // ===============================
+
+  // Home page Swiper (autoplay, pagination only)
   if (document.querySelector(".home-swiper")) {
     const homeSwiper = new Swiper(".home-swiper", {
       loop: true,
@@ -48,9 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===============================
-  // 3. About page Swiper (manual nav, no autoplay)
-  // ===============================
+  // About page Swiper (manual nav, no autoplay)
   if (document.querySelector(".about-swiper")) {
     const aboutSwiper = new Swiper(".about-swiper", {
       loop: true,
@@ -62,39 +63,62 @@ document.addEventListener("DOMContentLoaded", () => {
         nextEl: ".about-swiper .custom-next",
         prevEl: ".about-swiper .custom-prev",
       },
-      slidesPerView: 3,
+      slidesPerView: 4.5,
+      spaceBetween: 20,
       breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 30 },
+        640: { slidesPerView: 2.5, spaceBetween: 15 },
+        1024: { slidesPerView: 4.5, spaceBetween: 20 },
       },
     });
   }
-});
-// about our-partner slider
-var swiper = new Swiper(".partner-swiper", {
-    slidesPerView: 5,     // 🔥 5 logos per row (desktop)
-    spaceBetween: 30,     // gap between cards
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      992: { slidesPerView: 5 }, // large screen
-      768: { slidesPerView: 3 }, // tablet
-      576: { slidesPerView: 2 }, // mobile
-    }
-  });
 
-   var swiper = new Swiper(".testimonial-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      992: { slidesPerView: 3 },
-      768: { slidesPerView: 2 },
-      576: { slidesPerView: 1 },
-    }
-  });
+  // Partner logos Swiper
+  if (document.querySelector(".partner-swiper")) {
+    const partnerSwiper = new Swiper(".partner-swiper", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".partner-swiper .swiper-button-next",
+        prevEl: ".partner-swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        992: { slidesPerView: 5 },
+        768: { slidesPerView: 3 },
+        576: { slidesPerView: 2 },
+      },
+    });
+  }
+
+  // Testimonial Swiper
+  if (document.querySelector(".testimonial-swiper")) {
+    const testimonialSwiper = new Swiper(".testimonial-swiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".testimonial-swiper .swiper-button-next",
+        prevEl: ".testimonial-swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        992: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        576: { slidesPerView: 1 },
+      },
+    });
+  }
+
+  // ===============================
+  // 3. Load Header & Footer
+  // ===============================
+  function loadHTML(file, elementId) {
+    fetch(file)
+      .then((response) => response.text())
+      .then((data) => {
+        const el = document.getElementById(elementId);
+        if (el) el.innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading " + file, error));
+  }
+
+  loadHTML("header.html", "header");
+  loadHTML("footer.html", "footer");
+});
