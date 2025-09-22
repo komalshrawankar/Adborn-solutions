@@ -122,3 +122,70 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header.html", "header");
   loadHTML("footer.html", "footer");
 });
+
+//seo banner
+//  const carousel = document.querySelector('.carousel');
+// const items = document.querySelectorAll('.item');
+// const itemCount = items.length;
+// const angle = 360 / itemCount;
+
+// items.forEach((item, i) => {
+//   item.style.transform = `rotateY(${i * angle}deg) translateZ(250px)`;
+// });
+
+// let rotation = 0;
+
+// function animate() {
+//   rotation += 0.2; // rotation speed
+//   carousel.style.transform = `rotateY(${rotation}deg)`;
+
+//   items.forEach((item, i) => {
+//     const itemAngle = (i * angle + rotation) % 360;
+//     // items from 90 to 270 are at the back
+//     if (itemAngle > 90 && itemAngle < 270) {
+//       item.style.filter = 'blur(3px)';
+//       item.style.opacity = '0.4';
+//     } else {
+//       item.style.filter = 'blur(0)';
+//       item.style.opacity = '1';
+//     }
+//   });
+
+//   requestAnimationFrame(animate);
+// }
+
+// animate();
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return; // ✅ stop if no carousel on page
+
+  const items = document.querySelectorAll('.item');
+  const itemCount = items.length;
+  const angle = 360 / itemCount;
+
+  items.forEach((item, i) => {
+    item.style.transform = `rotateY(${i * angle}deg) translateZ(250px)`;
+  });
+
+  let rotation = 0;
+
+  function animate() {
+    rotation += 0.2; // rotation speed
+    carousel.style.transform = `rotateY(${rotation}deg)`;
+
+    items.forEach((item, i) => {
+      const itemAngle = (i * angle + rotation) % 360;
+      if (itemAngle > 90 && itemAngle < 270) {
+        item.style.filter = 'blur(3px)';
+        item.style.opacity = '0.4';
+      } else {
+        item.style.filter = 'blur(0)';
+        item.style.opacity = '1';
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});

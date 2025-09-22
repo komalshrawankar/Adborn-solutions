@@ -59,8 +59,9 @@ body{
 
 /* Button */
 .intro-btn {
-  background: linear-gradient(135deg, #6a0dad, #8a2be2);
+  background: linear-gradient(135deg, #C377FE, #406BFB);
   color: #fff;
+  border:none;
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
@@ -69,7 +70,7 @@ body{
 }
 
 .intro-btn:hover {
-  background: linear-gradient(135deg, #5b0099, #7a1fd1);
+  background: linear-gradient(135deg, #406BFB, #C377FE);
 }
 @media (max-width: 992px) {
   .navbar-container {
@@ -1176,32 +1177,36 @@ span.highlight-2 {
 /* Service Card */
 .service-card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 15px;
   padding: 20px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.02);
   transition: all 0.3s ease;
+  box-sizing: border-box;
+
+  /* ✅ Auto size */
+  width: 100%;       /* let Bootstrap col-md-6 col-lg-3 control width */
+  height:280px;      /* grow as per content */
 }
+
 .service-card:hover {
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
 }
 
-/* Icon Box */
-.service-icon-box {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  border-radius: 15px;
-  flex-shrink: 0;
+.service-card h5 {
+  margin: 0;
+  font-weight: 600;
 }
 
-/* Text Styles */
-.service-heading {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.service-card p {
+  margin: 0;
+  color:black;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .service-text {
@@ -3590,3 +3595,130 @@ color: black;
       height: 200px;
     }
 
+/* ----------------------------------SEO PAGE ----------------------------------------  */
+
+
+.slider3d {
+  perspective: 1200px;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.item {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  margin: -60px 0 0 -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  backface-visibility: visible;
+  transition: filter 0.3s, opacity 0.3s;
+}
+.seo-col{
+height: 400px;
+}
+.seo-col h1{
+  font-weight:500;
+  font-size:50px;
+  margin-top: 200px;
+}
+.seo-banner span{
+  width: 30%;
+  display: inline-block;
+}
+
+/* drive section  */
+.drive-section{
+  background-image: linear-gradient(to left ,#492AB3,#867AAD );
+  border-radius: 25px;
+  height: 420px;
+ 
+  
+}
+.drive-section img{
+  position: relative;
+  right: -70px;
+  top: -40px;
+}
+.seo-high{
+   background: linear-gradient(90deg, #7D6DB0, #4b37bb); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+}
+.seo-col a{
+  color:green;
+}
+.seo-col h4{
+  margin-top:20px;
+}
+.seo-para{
+  color:#565756;
+  font-weight:400;
+  font-size:22px;
+}
+.request-call{
+  margin-top:30px;
+}
+.request-call button{
+  height:60px;
+  width:350px;
+  font-weight:600;
+  font-size:25px;
+  color:white;
+  background: linear-gradient(90deg, #7D6DB0, #4b37bb);
+  border-radius:30px;
+}
+.req-span{
+  color: #565756;
+  font-size:20px;
+  font-weight:400;
+  margin-left:5px;
+}
+/* growth section */
+.growth-seo h2{
+  font-size:60px;
+  font-weight:400;
+
+}
+.growth-seo p{
+  font-size:22px;
+  font-weight:500;
+  color:#565756;
+}
+.growth-seo button{
+   height:60px;
+  width:350px;
+  font-weight:600;
+  font-size:25px;
+  color:white;
+  background: linear-gradient(90deg, #7D6DB0, #4b37bb);
+  border-radius:30px;
+}
+.drive-seo h3{
+  font-size:40px;
+  font-weight:400;
+  margin-bottom:10px;
+}
+.drive-seo button{
+  border-radius:20px;
+  height:60px;
+  width:350px;
+  border:none;
+}
