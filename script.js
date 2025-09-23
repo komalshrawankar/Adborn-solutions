@@ -189,3 +189,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate();
 });
+
+// seo final slider
+if (document.querySelector(".seo-final")) {
+  const seoSwiper = new Swiper(".seo-final", {
+    loop: true,
+    slidesPerView: 4,        // four cards visible at once
+    spaceBetween: 20,        // gap between slides
+    navigation: {
+      nextEl: ".seo-next",
+      prevEl: ".seo-prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 15 },
+      640: { slidesPerView: 2, spaceBetween: 15 },
+      992: { slidesPerView: 3, spaceBetween: 20 },
+      1200: { slidesPerView: 4, spaceBetween: 20 },
+    },
+  });
+}
+
+//seo our ratin
+
+let currentSlide = 0;
+const reviews = document.querySelectorAll('.review-item');
+const totalSlides = reviews.length;
+
+document.querySelector('.next-slide').addEventListener('click', function() {
+  moveSlide('next');
+});
+
+document.querySelector('.prev-slide').addEventListener('click', function() {
+  moveSlide('prev');
+});
+
+function moveSlide(direction) {
+  reviews[currentSlide].classList.remove('active');
+  if (direction === 'next') {
+    currentSlide = (currentSlide + 1) % totalSlides;
+  } else if (direction === 'prev') {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  }
+  reviews[currentSlide].classList.add('active');
+}
+
+// Initially show the first slide
+reviews[currentSlide].classList.add('active');
+

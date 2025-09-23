@@ -3722,3 +3722,215 @@ height: 400px;
   width:350px;
   border:none;
 }
+.free-audit{
+  height:55px;
+  display:block;
+  margin: 0 auto;
+  width:300px;
+  font-weight:600;
+  font-size:20px;
+  color:white;
+  background: linear-gradient(90deg,#4b37bb, #7D6DB0 );
+  border-radius:30px;
+}
+.seo-sub{
+  background: linear-gradient(90deg, #1ed670, #4b37bb); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+ 
+}
+.seo-tab{
+  font-size:20px;
+  font-weight:500;
+}
+.seo-tab1{
+  height: 250px;
+}
+.buisness-text p{
+  color:#565756 ;
+  font-size:20px;
+  margin-bottom:30px;
+}
+.smart-card{
+  height:260px;
+  border-radius:30px;
+  color:white;
+  box-sizing:border-box;
+  margin-left:-50px;
+  
+}
+.stop2{ 
+  font-size:22px;
+  margin: 20px auto;          /* centers horizontally */
+  border: 3px solid white;
+  border-radius: 20px;
+  padding:0px;
+  max-width: 1200px;           /* ✅ prevents full width */
+  width: 90%;
+  border-color:#3a2c78;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.smart1{
+  background-color:#4D2BBF;
+}
+.smart2{
+   background-color:black;
+   
+}
+.smart2 p{
+  color:#6C6D6B;
+}
+.smart3{
+   background-color:#8F75E3;
+}
+.smart4{
+  background-color:#373737;
+}
+.card-title{
+  font-size:25px;
+}
+.card-text{
+  font-size:15px;
+}
+.stop-span{
+  font-size:15px;
+}
+.stop-span p{
+  margin-top:23px;
+  margin-bottom:25px;
+}
+.stop3{
+  margin-top:23px;
+}
+
+.seo-wrapper {
+  gap:50px; /* spacing between cards */
+}
+
+.seo-slide {
+  width:280px; /* control card width */
+}
+
+.seo-slider-container {
+  position: relative;
+}
+
+.seo-button-prev,
+.seo-button-next {
+  color: #fff;
+}
+.cut-card .card {
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+.seo-card {
+  width: 100%;        /* card fills the width of its slide */
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.cut-card .seo-card {
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+.review-slider-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 15px;
+      text-align: center;
+    }
+
+    .review-slider-title {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .review-slider .swiper-slide {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .rs-image-box {
+      width: 250px;
+      height:300px;
+      background: #444;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .rs-review-box {
+      background: #111;
+      height:300px;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .rs-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .rs-score {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .rs-stars {
+      color: #e63946;
+      font-size: 1.2rem;
+    }
+
+    .rs-details {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .rs-quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .rs-company {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .rs-author {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Swiper pagination bullets */
+    .swiper-pagination-bullet {
+      background: #777;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: #e63946;
+    }
+
+    /* Swiper navigation buttons */
+    .swiper-button-prev, .swiper-button-next {
+      color: #fff;
+      margin-top:30px;
+    }
+/* Optional: spacing between slides is handled by Swiper spaceBetween */
+/* .seo-final .swiper-slide { */
+  /* no fixed width needed, Swiper handles it */
+/* } */
+
