@@ -1501,8 +1501,8 @@ span.highlight-2 {
 }
 
 .faq-title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size:25px;
+  font-weight:600;
   margin-bottom: 1rem;
 }
 
@@ -1515,7 +1515,8 @@ span.highlight-2 {
 .faq-accordion .accordion-button {
   background: transparent;
   color: #fff;
-  font-size: 1rem;
+  font-size:25px;
+  font-weight:500;
   padding: 1rem 0;
   box-shadow: none;
   justify-content: space-between;
@@ -1523,7 +1524,7 @@ span.highlight-2 {
 
 .faq-accordion .accordion-button::after {
   content: "+";
-  font-size: 1.2rem;
+  font-size:25px;
   color: #fff;
   transform: none !important;
 }
@@ -1540,6 +1541,9 @@ span.highlight-2 {
 /* location */
 .locations-section {
   background: #000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .all-over{
   margin-top:14px;
@@ -1678,6 +1682,7 @@ color: black;
   padding: 25px 35px;
   border-radius: 35px;
   margin-top: 60px;
+  height:310px;
 }
 .market-heading {
   align-items: start;
@@ -3661,6 +3666,7 @@ height: 400px;
   -webkit-background-clip: text; /* clip background to text */
   -webkit-text-fill-color: transparent; /* make text itself transparent */
   background-clip: text;
+ 
 }
 .seo-col a{
   color:green;
@@ -3684,6 +3690,7 @@ height: 400px;
   color:white;
   background: linear-gradient(90deg, #7D6DB0, #4b37bb);
   border-radius:30px;
+  border:none;
 }
 .req-span{
   color: #565756;
@@ -3916,7 +3923,7 @@ height: 400px;
     }
 
     /* Swiper pagination bullets */
-    .swiper-pagination-bullet {
+    /* .swiper-pagination-bullet {
       background: #777;
       opacity: 1;
     }
@@ -3925,12 +3932,429 @@ height: 400px;
     }
 
     /* Swiper navigation buttons */
-    .swiper-button-prev, .swiper-button-next {
+    /* .swiper-button-prev, .swiper-button-next {
       color: #fff;
       margin-top:30px;
-    }
+    } */ 
 /* Optional: spacing between slides is handled by Swiper spaceBetween */
 /* .seo-final .swiper-slide { */
   /* no fixed width needed, Swiper handles it */
 /* } */
 
+/* ===============influencer page===================== */
+.influ-head{
+  font-size:40px;
+  font-weight:400;
+  margin-top: 50px;
+  margin-bottom:50px;
+}
+.influ-card{
+  background-color:#1B1B1B;
+  gap:20px 20px;
+  color:white;
+  margin-bottom:20px;
+  border-radius:20px;
+}
+.shift-left {
+  margin-left: -50px;
+}
+
+ .card-text1 h3 {
+  background: linear-gradient(90deg, #4D2BBF, #9B8FC0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  font-size: 30px;
+}
+.card-text1 h1{
+  font-size:50px;
+  font-weight:600;
+}
+.impact-text p{
+ margin-left:5px;
+}
+.solution{
+  box-sizing:border-box;
+  padding:30px;
+  border-radius:30px;
+  width:600px;
+  background-color:#6875E7;
+  color:white;
+}
+/* influencer slider */
+
+.in-slide{
+  margin-top:100px;
+}
+/* Wrap nav buttons in a flex container */
+.swiper-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;         /* space between buttons */
+  margin-top: 20px;  /* space below the review box */
+}
+
+/* Reset Swiper default absolute positioning */
+.review-slider .swiper-button-prev,
+.review-slider .swiper-button-next {
+  position: static;   /* removes default absolute positioning */
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 1px solid #fff; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.partner-influ{
+  height:400px;
+  border-radius:30px;
+  /* width:300px; */
+
+}
+.success-card{
+  background: linear-gradient(135deg, #C377FE, #406BFB);
+  align-items: stretch;
+  color:white;
+  height:400px;
+  border-radius:20px;
+  margin-top:50px;
+}
+.success-img img {
+    height: 100%; /* fill the parent div's height */
+    width: auto; /* maintain aspect ratio */
+    display: block; /* remove inline gaps */
+}
+.success-card button{
+  height:50px;
+  width:250px;
+  border-radius:20px;
+  border:none;
+  font-size:20px;
+  font-weight:500;
+
+}
+.cam-tags p{
+  margin-top:30px;
+}
+.cam-tags1{
+   margin-top:30px;
+}
+.industry-list {
+  margin: 0;
+  padding: 0;
+}
+
+.industry-list li {
+  flex: 0 0 12.5%;   /* exactly 8 items per row */
+  text-align: center;
+  color: #868786;
+  font-weight: 500;
+  margin: 0;         /* remove extra spacing */
+  padding: 8px 0; 
+  font-size:20px;   /* optional: vertical breathing space */
+}
+
+/* Responsive: 4 per row on tablets */
+@media (max-width: 992px) {
+  .industry-list li {
+    flex: 0 0 25%;
+  }
+}
+
+/* Responsive: 2 per row on mobile */
+@media (max-width: 576px) {
+  .industry-list li {
+    flex: 0 0 50%;
+  }
+}
+
+
+/* Section styles */
+/* Section styles */
+.next-gen {
+    background-color: #000;
+  }
+  .next-gen-card {
+    background-color: #1e1e1e;
+  }
+  .next-gen-purple {
+    color: #a855f7; /* Purple */
+  }
+  .next-gen-red {
+    color: #ef4444; /* Red */
+  }
+  .exp-circle img{
+ margin-left:50px;
+  }
+  .exp-circle1{
+    margin-top: 60px;
+    line-height: 1.5;
+  
+  }
+  .exp-circle1 p {
+  line-height: 1.8; /* default is around 1.5, increase as needed */
+}
+.star-section{
+  margin-top:100px;
+}
+.star-section img{
+  margin-left:50px;
+}
+.text-next1{
+   background: linear-gradient(90deg, #312256, #AD3D45); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:30px;
+  font-weight:500;
+
+}
+.text-next2{
+   background: linear-gradient(90deg,  #312256, #AD3D45); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:30px;
+  font-weight:500;
+
+}
+.text-next3{
+  
+  color: #1DB361;
+  font-size:30px;
+  font-weight:500;
+
+}
+.text-next4{
+   background: linear-gradient(90deg,  #655B99, #1EBC67); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:30px;
+  font-weight:500;
+}
+.text-next5{
+    background: linear-gradient(90deg,  #312256, #AD3D45); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:30px;
+  font-weight:500;
+}
+
+/* ===========UI-UX PAGE ================ */
+.ui-ux img{
+  margin-top:80px;
+  margin-left:70px;
+}
+.ui-ux-btn{
+  height: 60px;
+  width: 330px;
+  margin-top:90px;
+}
+
+
+
+
+
+
+/* -------------webdev page-------- */
+.cutting-edge {
+  background: #000;
+}
+.tags-dev{
+  background-color: #030402;
+}
+.mobile-app img{
+  margin-top:120px;
+}
+
+
+.cutting-edge h2 span {
+  color: #6c63ff; /* purple accent */
+}
+
+.cutting-card {
+  background: #1a1a1a;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  min-height:300px;
+}
+
+/* .cutting-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+} */
+
+.cutting-card h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dot-indicator {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-left: 8px;
+  object-fit: cover; 
+   flex-shrink: 0;        
+}
+.mobile-challenge{
+  margin-bottom:100px;
+}
+.mobile-btn{
+  height:40px;
+  width:350px;
+}
+/* .web-p{
+  margin-top:70px;
+} */
+.text-cut{
+  color: #5B3EBA;
+}
+.cut3 {
+  margin-top:50px;
+}
+.cut2 {
+  margin-top:100px;
+}
+.cut1 {
+  margin-top:150px;
+}
+.cut4{
+  margin-bottom:100px;
+  
+}
+.cut-main{
+  font-weight:400;
+  font-size:40px;
+}
+
+.cutting-edge{
+  margin-bottom: 100px;
+}
+.text-white-50{
+  color: white;
+}
+.cutting-card p{
+  line-height: 1.8;
+}
+.choose-p{
+  margin-top:100px;
+}
+.choose-w{
+  font-size:40px;
+  font-weight:400;
+}
+/* ------------podcast--------------- */
+/* Fix card height */
+/* Equal card height */
+.podcast-swiper .card {
+  height: 420px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image fixed height */
+.podcast-swiper .card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.p-top{
+  margin :0px;
+}
+/* Text fills rest */
+.podcast-swiper .card-body {
+  flex: 1;
+  overflow: hidden;
+}
+.web-para{
+  font-size:17px;
+  color:gray;
+}
+
+.web-dev1 img{
+  margin-top:80px;
+}
+.web-dev-btn{
+  margin-top:0px;
+}
+.web-card1{
+  margin-bottom:80px;
+}
+
+/* --------------------social media page---------------- */
+.social{
+  background: linear-gradient(180deg, #2DA189, #1ed670); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+
+}
+.social-para{
+  height:50px;
+  width:700px;
+  font-size:22px;
+  font-weight:400;
+  color:#747574;
+}
+.social-btn{
+  margin-top:100px;
+   color:#747574;
+   font-size:20px;
+   font-weight:400;
+}
+
+/* ------------email-marketing---------- */
+.email-para{
+   color:#565756;
+  font-weight:400;
+  font-size:17px;
+}
+.email-btn{
+  margin-top:50px;
+}
+.email-w img{
+  margin-top:100px;
+}
+.impact-m{
+  margin-bottom:50px;
+}
+.email-price{
+  margin-top:100px;
+}
+
+/* ----------mobile app----------- */
+.mobile-cut{
+  margin-top:50px;
+}
+
+/* ----------video-editing--------- */
+.video-img img{
+  margin-top:130px;
+}
+.video-para{
+  margin-top:10px;
+}
+.video-btn button{
+margin-top:20px;
+}
+.video-slider1{
+  margin-top:100px;
+}
+.video-stack{
+  margin-top:100px;
+}

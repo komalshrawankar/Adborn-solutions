@@ -211,28 +211,64 @@ if (document.querySelector(".seo-final")) {
 
 //seo our ratin
 
-let currentSlide = 0;
-const reviews = document.querySelectorAll('.review-item');
-const totalSlides = reviews.length;
+// let currentSlide = 0;
+// const reviews = document.querySelectorAll('.review-item');
+// const totalSlides = reviews.length;
 
-document.querySelector('.next-slide').addEventListener('click', function() {
-  moveSlide('next');
+// document.querySelector('.next-slide').addEventListener('click', function() {
+//   moveSlide('next');
+// });
+
+// document.querySelector('.prev-slide').addEventListener('click', function() {
+//   moveSlide('prev');
+// });
+
+// function moveSlide(direction) {
+//   reviews[currentSlide].classList.remove('active');
+//   if (direction === 'next') {
+//     currentSlide = (currentSlide + 1) % totalSlides;
+//   } else if (direction === 'prev') {
+//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+//   }
+//   reviews[currentSlide].classList.add('active');
+// }
+
+// // Initially show the first slide
+// reviews[currentSlide].classList.add('active');
+
+
+// review slider
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".review-slider", {
+    loop: true,
+    speed: 600,
+    slidesPerView: 1,
+    spaceBetween: 30,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+    },
+  });
 });
-
-document.querySelector('.prev-slide').addEventListener('click', function() {
-  moveSlide('prev');
-});
-
-function moveSlide(direction) {
-  reviews[currentSlide].classList.remove('active');
-  if (direction === 'next') {
-    currentSlide = (currentSlide + 1) % totalSlides;
-  } else if (direction === 'prev') {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  }
-  reviews[currentSlide].classList.add('active');
-}
-
-// Initially show the first slide
-reviews[currentSlide].classList.add('active');
-
