@@ -109,52 +109,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===============================
   // 3. Load Header & Footer
   // ===============================
-  function loadHTML(file, elementId) {
-    fetch(file)
-      .then((response) => response.text())
-      .then((data) => {
-        const el = document.getElementById(elementId);
-        if (el) el.innerHTML = data;
-      })
-      .catch((error) => console.error("Error loading " + file, error));
-  }
+  function loadHTML(file, elementId, callback) {
+  fetch(file)
+    .then((response) => response.text())
+    .then((data) => {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.innerHTML = data;
+        if (callback) callback(); // run callback after content loads
+      }
+    })
+    .catch((error) => console.error("Error loading " + file, error));
+}
 
-  loadHTML("header.html", "header");
-  loadHTML("footer.html", "footer");
+// Load header, works, footer normally
+loadHTML("header.html", "header");
+loadHTML("footer.html", "footer");
+loadHTML("ourwork.html", "ourwork");
+loadHTML("expert.html","expert");
+
+// Load rating and initialize Swiper after it's injected
+loadHTML("rating.html", "rating", initSwiper);
 });
 
-//seo banner
-//  const carousel = document.querySelector('.carousel');
-// const items = document.querySelectorAll('.item');
-// const itemCount = items.length;
-// const angle = 360 / itemCount;
-
-// items.forEach((item, i) => {
-//   item.style.transform = `rotateY(${i * angle}deg) translateZ(250px)`;
-// });
-
-// let rotation = 0;
-
-// function animate() {
-//   rotation += 0.2; // rotation speed
-//   carousel.style.transform = `rotateY(${rotation}deg)`;
-
-//   items.forEach((item, i) => {
-//     const itemAngle = (i * angle + rotation) % 360;
-//     // items from 90 to 270 are at the back
-//     if (itemAngle > 90 && itemAngle < 270) {
-//       item.style.filter = 'blur(3px)';
-//       item.style.opacity = '0.4';
-//     } else {
-//       item.style.filter = 'blur(0)';
-//       item.style.opacity = '1';
-//     }
-//   });
-
-//   requestAnimationFrame(animate);
-// }
-
-// animate();
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector('.carousel');
   if (!carousel) return; // ✅ stop if no carousel on page
@@ -209,36 +186,13 @@ if (document.querySelector(".seo-final")) {
   });
 }
 
-//seo our ratin
-
-// let currentSlide = 0;
-// const reviews = document.querySelectorAll('.review-item');
-// const totalSlides = reviews.length;
-
-// document.querySelector('.next-slide').addEventListener('click', function() {
-//   moveSlide('next');
-// });
-
-// document.querySelector('.prev-slide').addEventListener('click', function() {
-//   moveSlide('prev');
-// });
-
-// function moveSlide(direction) {
-//   reviews[currentSlide].classList.remove('active');
-//   if (direction === 'next') {
-//     currentSlide = (currentSlide + 1) % totalSlides;
-//   } else if (direction === 'prev') {
-//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-//   }
-//   reviews[currentSlide].classList.add('active');
-// }
-
-// // Initially show the first slide
-// reviews[currentSlide].classList.add('active');
 
 
 // review slider
-document.addEventListener("DOMContentLoaded", function () {
+// ===============================
+// Review Slider Init Function
+// ===============================
+function initSwiper() {
   new Swiper(".review-slider", {
     loop: true,
     speed: 600,
@@ -261,14 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
-      992: {
-        slidesPerView: 1,
-        spaceBetween: 50,
-      },
+      768: { slidesPerView: 1, spaceBetween: 40 },
+      992: { slidesPerView: 1, spaceBetween: 50 },
     },
   });
-});
+
+ 
+}
