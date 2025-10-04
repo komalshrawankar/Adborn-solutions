@@ -4081,7 +4081,7 @@ height: 400px;
         .channel-box{
             padding: 15px 25px;
             border-radius: 40px;
-            border: 1px solid orange;
+            /* border: 1px solid ; */
         }
         .channel-circle{
             height: 100px;
@@ -4095,33 +4095,34 @@ height: 400px;
         }
         .c-2, .c-7{
             margin: 45px 0;
-             border-color: #7B353D;
+            border-color: #7B353D;
             
         }
         .c-3{
-         border-color: #5C356F;
+         border:1px solid #5C356F;
         }
         .c-4{
-          border-color: #275BDB;
+          border: 1px solid #1C429D;
         }
-        .c-1{
+        .channel-1{
             transform: rotate(-10deg);
+            border: 1px solid #AD6F3F;
         }
         .c-5{
             transform: rotate(-10deg);
-            border-color: #275BDB;
+            border: 1px solid #1C429D;
         }
         .c-6{
             transform: rotate(-10deg);
+            border:1px solid  #5C356F ;
         }
         .c-8{
             transform: rotate(10deg);
+            border:1px solid #8D5A32;
         }
-        .c-6{
-          border-color: #5C356F;
-        }
-        .c-7{
-          border-color: #7B353D;
+        
+        .c-7,.c-2{
+          border:1px solid #7B353D;
         }
         .box1{
             height: 150px;
@@ -4153,13 +4154,14 @@ height: 400px;
         .text-column img{
          text-decoration:none;
         }
+       
 
 .shift-left {
   margin-left: -50px;
 }
 
  .card-text1 h3 {
-  background: linear-gradient(90deg, #4D2BBF, #9B8FC0);
+  background: linear-gradient(90deg, #4D2BBF 40%, #9B8FC0 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4923,7 +4925,7 @@ font-size:20px;
         .channel-box{
             padding: 15px 25px;
             border-radius: 40px;
-            border: 1px solid orange;
+    
         }
 
 .join-list2{
