@@ -389,6 +389,10 @@ width: 100%;
   font-size: 50px;
   font-weight: 500px;
 }
+.fw-bold4{
+  font-size:40px;
+  font-weight:500;
+}
 .fw-bold2 {
   font-size: 20px;
 }
@@ -1823,6 +1827,35 @@ color: black;
   margin-left:1rem;
   margin-bottom:25px;
 }
+.part1{
+         height: 200px;
+         width: 200px;
+         border-right: 1px solid black;
+         border-bottom: 1px solid black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        }
+        .about-part{
+
+            background-color: white;
+            padding: 80px 40px;
+        }
+        .shape1{
+            height: 120px;
+            width: 120px;
+            background-color: gray;
+            border-radius: 50%;
+        }
+        .part2{
+border-right: 0;
+        }
+        .part3{
+border-bottom: 0;
+        }
+        .part4{
+            border-right: 0;
+        }
 
 /* highlights section  */
 .high-card{
@@ -2060,7 +2093,7 @@ width:20px; */
    margin-top: 30px;
     }
     .port-card button{
-   margin-bottom: 30px;
+   margin-bottom: 40px;
    border:none;
    border-radius:15px;
    margin-top:20px;
@@ -2234,19 +2267,71 @@ margin-top:50px;
 }
 /* our partner */
 .our-partner {
-  background: #000; /* black background */
-  color: #fff;
+  position: relative;
+}
+
+.partner-slider-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 60px; /* extra space for arrows */
 }
 
 .partner-card {
-  width: 120px;
+  width: 140px;
   height: 120px;
-  background: #ddd; /* placeholder for logos */
-  border-radius: 0px;
+  background: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+.partner-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Arrow styling */
+.partner-prev,
+.partner-next {
+  position: absolute;
+  top: 50%; /* centers vertically */
+  transform: translateY(-50%);
+ 
+   border-radius: 50%; 
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color:white;
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* .partner-prev:hover,
+.partner-next:hover {
+  background: #4d2bbf;
+  color: white;
+} */
+
+.partner-prev {
+  left: 0; /* perfectly outside first card */
+}
+
+.partner-next {
+  right: 0;
+}
+
+.partner-swiper {
+  padding: 10px 0;
+}
+
 /* testimonial section */
 .testimonials {
   background: #000;
@@ -2368,7 +2453,22 @@ margin-top:50px;
 font-size:30px;
 }
 .admin-section{
-  font-size:18px;
+  font-size:15px;
+}
+ .blog-btn{
+background-color: black;
+color: white;
+box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+padding: 5px;}
+
+.blog-btn-inner{
+padding: 10px 22px;
+
+background: linear-gradient(179.18deg, #000000 0.71%, #666666 276.31%);
+box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+border-radius: 15px;
+
 }
 @media (max-width: 768px) {
   .blog {
@@ -2487,7 +2587,7 @@ font-size:30px;
   line-height: 1.2;
   position: absolute;
   right:15px; 
-  margin-top:-25px;
+  margin-top:-50px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
@@ -2528,6 +2628,7 @@ font-size:30px;
     center/cover;
   height: 70vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -2538,7 +2639,17 @@ font-size:30px;
   font-weight: 500;
   font-size: 3rem;
 }
-.btn-custom {
+.hero-logo {
+  position: absolute;
+  top: 20px;          
+  left: 40px;         
+  height: 80px;       
+  width: auto;
+  z-index: 10;       
+}
+
+
+.btn-custom2 {
   background-color: #4d2bbf; /* Purple button */
   color: white;
   width: 255px;
@@ -2547,6 +2658,12 @@ font-size:30px;
   margin: 20px;
   font-size: 1.3rem;
   font-weight: 400;
+}
+.process{
+  background: linear-gradient(90deg, #8E7FBF, #6200ea); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
 }
 .btn-custom:hover {
   background-color: #241459;
@@ -2658,9 +2775,9 @@ font-size:30px;
 .highlight-green {
   color: #00ff99;
 }
-.highlight-blue {
-  color: #6a5acd;
-}
+/* .highlight-blue {
+ background: linear-gradient(90deg,#7674EB 20%,#9696C4);
+} */
 
 /* Toggle Buttons */
 .toggle-options {
@@ -3956,6 +4073,87 @@ height: 400px;
   margin-bottom:20px;
   border-radius:20px;
 }
+ .box {
+            height: 150px;
+            background-color: gray;
+            border-radius: 25px;
+        }
+        .channel-box{
+            padding: 15px 25px;
+            border-radius: 40px;
+            border: 1px solid orange;
+        }
+        .channel-circle{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color:#121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .c-2, .c-7{
+            margin: 45px 0;
+             border-color: #7B353D;
+            
+        }
+        .c-3{
+         border-color: #5C356F;
+        }
+        .c-4{
+          border-color: #275BDB;
+        }
+        .c-1{
+            transform: rotate(-10deg);
+        }
+        .c-5{
+            transform: rotate(-10deg);
+            border-color: #275BDB;
+        }
+        .c-6{
+            transform: rotate(-10deg);
+        }
+        .c-8{
+            transform: rotate(10deg);
+        }
+        .c-6{
+          border-color: #5C356F;
+        }
+        .c-7{
+          border-color: #7B353D;
+        }
+        .box1{
+            height: 150px;
+            width: 120px;
+            background-color: gray;
+            border-radius: 25px;
+            margin: 10px;
+        }
+        .expert-column{
+            display: flex;
+        }
+        .col1{
+           margin-top: 50px;
+        }
+        .box-m{
+            margin-top: 80px;
+        }
+        .text-column{
+            width: 50%;
+            margin: -100px auto 0 auto;
+            text-align: center;
+        }
+        .text-column button{
+          height:50px;
+          width:490px;
+          border-radius:20px;
+          border:none;
+        }
+        .text-column img{
+         text-decoration:none;
+        }
+
 .shift-left {
   margin-left: -50px;
 }
@@ -4082,6 +4280,15 @@ height: 400px;
   .next-gen-card {
     background-color: #1e1e1e;
   }
+  .next-gen-card {
+  text-align: start;       /* aligns text to start/left */
+  display: flex;
+  flex-direction: column;  /* ensures proper vertical stacking */
+  align-items: flex-start; /* aligns items to start horizontally */
+}
+.next-gen-card p{
+  color:#747574;
+}
   .next-gen-purple {
     color: #a855f7; /* Purple */
   }
@@ -4536,8 +4743,509 @@ font-weight:400;
 color:#565756;
 width:80%;
 }
+/* Hide extra cards initially */
+.extra-card {
+  display: none;
+}
+
+.b2b-hero{
+  font-size:40px;
+  font-weight:600;
+  margin-top:100px;
+}
+.b2b-collab{
+  margin-top:0px;
+}
 
 /* ---------gaming------------- */
 .iGameing-brand{
   margin-top:100px;
 }
+.seo-high2{
+  display: inline;
+  background: linear-gradient(90deg, #7D4CE5 40%, #1FD472 100%); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:40px;
+}
+.second-line{
+  display:inline;
+  font-size:40px;
+ 
+}
+
+
+.iGameing-brand p{
+  color: #747574;
+}
+.software-list li{
+  font-size:12px ;
+}
+.software-btn1{
+  height:51px;
+  font-size:10px;
+ 
+}
+.software-btn2{
+  height:51px;
+  font-size:15px;
+ 
+}
+.gaming-s{
+   background: linear-gradient(90deg, #472AA8, #9585C6); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+}
+.game-btn button{
+margin-top:50px;
+}
+.gaming-para{
+margin-bottom:100px;
+margin-top:30px;
+}
+.partner button{
+height: 60px;
+width:200px;
+border-radius:30px;
+color:white;
+font-weight:500;
+background: linear-gradient(90deg, #7D6DB0, #4b37bb);
+border:none;
+font-size:20px;
+}
+
+
+/* -----------software----------- */
+.highlight-text {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+    .highlight-text .blue {
+      color: #6c63ff; /* bluish-purple for emphasis */
+    }
+    .btn-consult {
+      background: #6c63ff;
+      border-radius: 25px;
+      padding: 12px 18px;
+      font-weight: 400;
+      color: #fff;
+      transition: all 0.3s ease;
+      font-size: 25px;
+    }
+    .btn-consult:hover {
+      background: #4b37bb;
+      color: #fff;
+    }
+    .review2-card {
+      border: 1px solid #444;
+     
+      padding: 40px;
+      border-radius: 8px;
+      height: 100%;
+    }
+    .rating {
+      color: red;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .software-hero{
+      margin-top:80px;
+    }
+    .software-hero h1{
+      font-size:50px;
+    }
+    .software-hero p{
+      color:#747574;
+      font-size:22px;
+    }
+    .btn-innovate{
+       border-radius: 25px;
+      padding: 12px 18px;
+      font-weight: 500;
+      color: #fff;
+      background: #6c63ff;
+      font-size: 20px;
+      border: none;
+    }
+    .key-section li{
+      text-decoration: none;
+    }
+    .drive-seo2 {
+  background-color: #6c63ff;
+  border-radius: 20px;
+  color: #fff;
+  padding:20px;
+  height:300px;
+}
+
+.drive-seo2 input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.btn-conquer{
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-weight: 500;
+      color: #fff;
+      /* background: #6c63ff; */
+      font-size: 20px;
+      border: none;
+      background: linear-gradient(to right, #6200ea,#4B29B8);
+     
+}
+/* -----------e-commerce----- */
+.fw-bold5{
+  font-size:45px;
+  margin-top:40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600;
+}
+.ecommerce-btn{
+  height:60px;
+  width:300px;
+  border-radius:30px;
+  background: linear-gradient(90deg,#26155E,#4928B6);
+  margin-right:10px;
+}
+/* our people */
+.talent-section {
+  background: #000;
+  margin-top:95px;
+}
+.box {
+            height: 150px;
+            background-color: gray;
+            border-radius: 25px;
+        }
+        .channel-box{
+            padding: 15px 25px;
+            border-radius: 40px;
+            border: 1px solid orange;
+        }
+
+.join-list2{
+  text-decoration:none;
+  color:white !important;
+}
+.anywhere{
+  color: #747574;
+}
+
+/* contact-us */
+.career-hero {
+  margin-top: 120px;
+  position: relative;
+  color: #fff;
+}
+.contact-us{
+  margin-top:100px;
+}
+.book-call{
+  border-radius:20px;
+}
+
+
+.highlight-text {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+
+.highlight-text .blue {
+  background: linear-gradient(90deg, #6200ea, #8E7FBF); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+}
+
+.btn-contact {
+  background: linear-gradient(to right, #6200ea, #4B29B8);
+  border-radius: 25px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 25px;
+  border: none;
+}
+
+.btn-contact:hover {
+  transform: scale(1.05);
+}
+
+/* Labels */
+.career-label {
+  position: absolute;
+  padding: 6px 14px;
+  border: 1px solid #7472EE;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #7472EE;
+  background: transparent;
+  white-space: nowrap;
+}
+
+/* --- Desktop Placement (closer to heading) --- */
+.graphic-designer {
+  top: 10px;
+  left: 10%;
+}
+
+.smm-manager {
+  top: 10px;
+  right: 15%;
+}
+
+.strategist {
+  bottom: 70px;
+  left: 20%;
+}
+
+.account-manager {
+  bottom: 70px;
+  right: 20%;
+}
+
+/* Arrows */
+.career-label::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.graphic-designer::after {
+  top: 100%;
+  left: 20px;
+  border-top-color: #8679B3;
+}
+
+.smm-manager::after {
+  top: 100%;
+  right: 20px;
+  border-top-color: #8679B3;
+}
+
+.strategist::after {
+  bottom: 100%;
+  left: 20px;
+  border-bottom-color: #8679B3;
+}
+
+.account-manager::after {
+  bottom: 100%;
+  right: 20px;
+  border-bottom-color: #8679B3;
+}
+
+/* ----------------------- */
+/* RESPONSIVE BEHAVIOR     */
+/* ----------------------- */
+@media (max-width: 992px) {
+  .graphic-designer { top: 0; left: 10%; }
+  .smm-manager { top: 0; right: 10%; }
+  .strategist { bottom: 50px; left: 12%; }
+  .account-manager { bottom: 50px; right: 12%; }
+}
+
+@media (max-width: 768px) {
+  .career-label {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .graphic-designer { top: -20px; left: 25%; }
+  .smm-manager { top: -20px; right: 25%; }
+  .strategist { bottom: -20px; left: 25%; }
+  .account-manager { bottom: -20px; right: 25%; }
+}
+
+@media (max-width: 576px) {
+  .career-label {
+    position: static;
+    display: inline-block;
+    margin: 8px 6px;
+  }
+  .career-label::after { display: none; } /* hide arrows on mobile */
+  .career-hero { margin-top: 60px; }
+}
+
+.parent-class h1{
+  font-size:50px;
+}
+.parent-class p{
+  font-size:20px;
+  color: #747574;
+}
+.parent-class{
+  margin-top:30px;
+}
+.work-img {
+  height: 300px;            /* take full height of parent */
+  width: 300px;
+  max-height: 320px;       /* keeps it from stretching too much */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+
+.work-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.number p{
+  background: linear-gradient(90deg, #6200ea, #8E7FBF); /* your colors */
+  -webkit-background-clip: text; /* clip background to text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  background-clip: text;
+  font-size:25px;
+}
+.list-group-item {
+  font-size: 16px;
+  color:white;
+}
+
+.btn-outline-light {
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+.text-gray{
+  color:gray;
+}
+.main-head{
+  font-weight:500;
+  font-size:20px;
+}
+.card-learn{
+  border-right: 2px solid white;
+  height:400px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.great p{
+  color:#747574;
+}
+.great span {
+  color:white;
+}
+.career-form * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .career-form {
+      background: #fff;
+       max-width: calc(100% - 400px); 
+      width: 100%;
+      padding: 30px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 40px auto; /* centers the form but won’t affect other sections */
+    }
+
+    .career-form .form-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .career-form .form-header img {
+      max-width: 160px;
+      margin-bottom: 10px;
+    }
+
+    .career-form .form-header h2 {
+      font-size: 18px;
+      color: #000;
+      line-height: 1.4;
+    }
+
+    .career-form form label {
+      display: block;
+      font-size: 14px;
+      margin: 15px 0 6px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .career-form form input[type="text"],
+    .career-form form input[type="email"],
+    .career-form form input[type="tel"],
+    .career-form form input[type="url"],
+    .career-form form select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .career-form form input:focus,
+    .career-form form select:focus {
+      border-color: #6c63ff;
+    }
+
+    .career-form .radio-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 6px;
+    }
+
+    .career-form .radio-group label {
+      font-size: 14px;
+      font-weight: normal;
+      color: #444;
+      cursor: pointer;
+    }
+
+    .career-form button {
+     display: block;          /* makes margin auto work */
+  margin: 20px auto 0;     /* centers button horizontally */
+  width: 200px;   
+      padding: 12px;
+      margin-top: 20px;
+      background: #5c3dff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      
+     
+    }
+
+    .career-form button:hover {
+      background: #4b32cc;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .career-form {
+        padding: 20px;
+      }
+      .career-form .form-header h2 {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 800px) {
+  .career-form {
+    max-width: 100%; /* removes 200px margins on small screens */
+    margin: 20px;
+  }
+}
+
