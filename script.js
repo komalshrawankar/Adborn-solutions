@@ -1,3 +1,4 @@
+ console.log("Script loaded and running");
 // Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   // ===============================
@@ -124,7 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Load other sections
 loadHTML("header.html", "header");
-loadHTML("footer.html", "footer");
+// Loading footer dynamically
+loadHTML("footer.html", "footer", () => {
+  console.log("Footer loaded!");
+  initBookForm(); // Attach the form event listener now
+});
+
 loadHTML("ourwork.html", "ourwork");
 loadHTML("expert.html", "expert");
 loadHTML("rating.html", "rating", initSwiper);
@@ -287,3 +293,159 @@ document.getElementById("showMoreBtn").addEventListener("click", function (e) {
   // Optionally hide the button after showing
   this.style.display = "none";
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreBtn = document.getElementById("exploreBtn");
+  const extraCards = document.querySelectorAll(".extra-team"); // selects col-md-4 wrapper
+  let expanded = false;
+
+  exploreBtn.addEventListener("click", () => {
+    extraCards.forEach(col => {
+      col.style.display = expanded ? "none" : "flex"; // flex for col wrapper
+    });
+
+    exploreBtn.textContent = expanded ? "Explore Team" : "Show Less";
+    expanded = !expanded;
+  });
+});
+
+
+
+
+
+
+// ===============================
+// Book A Call Form Submission
+// ===============================
+function initBookForm() {
+  const form = document.getElementById("bookForm");
+  const submitBtn = document.getElementById("bookSubmitBtn");
+
+  if (!form) return;
+
+  const API_BASE = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+    ? "http://localhost:5000"
+    : "https://your-production-backend.com";
+
+  // feedback element
+  let feedback = document.createElement("p");
+  feedback.id = "formFeedback";
+  feedback.style.marginTop = "10px";
+  feedback.style.fontWeight = "500";
+  feedback.style.transition = "opacity 0.5s ease";
+  form.appendChild(feedback);
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Honeypot
+    if (document.getElementById("website").value) return;
+
+    const payload = {
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName: document.getElementById("lastName").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      message: document.getElementById("message").value.trim(),
+    };
+
+    if (!payload.firstName || !payload.email) {
+      feedback.textContent = "Please enter your first name and email.";
+      feedback.style.color = "red";
+      hideFeedbackAfterDelay(feedback);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    feedback.textContent = "";
+
+    try {
+      const res = await fetch(`${API_BASE}/api/forms/submit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        feedback.textContent = data.message || "Failed to send. Please try again.";
+        feedback.style.color = "red";
+      } else {
+        feedback.textContent = data.message || "Thank you! We'll get back to you soon.";
+        feedback.style.color = "green";
+        form.reset();
+      }
+
+      hideFeedbackAfterDelay(feedback);
+    } catch (err) {
+      console.error(err);
+      feedback.textContent = "Network error — please try again later.";
+      feedback.style.color = "red";
+      hideFeedbackAfterDelay(feedback);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+
+  function hideFeedbackAfterDelay(element) {
+    setTimeout(() => {
+      element.style.opacity = "0";
+      setTimeout(() => {
+        element.textContent = "";
+        element.style.opacity = "1";
+      }, 500);
+    }, 5000);
+  }
+}
+
+
+//career form
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const careerForm = document.getElementById("careerForm");
+//   if (!careerForm) return;
+
+//   careerForm.addEventListener("submit", async (e) => {
+//     e.preventDefault();
+
+//     const submitBtn = document.getElementById("careerSubmitBtn");
+//     submitBtn.disabled = true;
+//     submitBtn.textContent = "Submitting...";
+
+//     const formData = {
+//       position: document.getElementById("position").value,
+//       firstName: document.getElementById("fname").value,
+//       lastName: document.getElementById("lname").value,
+//       phone: document.getElementById("phone").value,
+//       email: document.getElementById("email").value,
+//       resumeLink: document.getElementById("resume").value,
+//       portfolioLink: document.getElementById("portfolio").value,
+//       test: document.querySelector('input[name="test"]:checked')?.value,
+//       salary: document.getElementById("salary").value,
+//       availability: document.getElementById("start").value,
+//     };
+
+//     try {
+//       const res = await fetch("http://localhost:5000/api/career/apply", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData),
+//       });
+
+//       const data = await res.json();
+//       alert(data.message);
+//       careerForm.reset();
+//     } catch (err) {
+//       console.error(err);
+//       alert("Something went wrong. Please try again later.");
+//     } finally {
+//       submitBtn.disabled = false;
+//       submitBtn.textContent = "Submit";
+//     }
+//   });
+// });

@@ -52,27 +52,34 @@
             <h3 class="mb-3">BOOK A CALL WITH US</h3>
             <p class="small text-muted">(please wait 5 seconds for the calendar to load after clicking the button)</p>
 
-            <form class="book-input">
+            <form id="bookForm" class="book-input" autocomplete="off" novalidate>
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="First Name" required>
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name"
+                  required>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Last Name" required>
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" required>
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
               </div>
               <div class="mb-3">
-                <input type="tel" class="form-control" placeholder="+91 (optional)">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 (optional)">
               </div>
               <div class="mb-3">
-                <textarea class="form-control" rows="2" placeholder="What tasks would you like to solve?"></textarea>
+                <textarea id="message" name="message" class="form-control" rows="2"
+                  placeholder="What tasks would you like to solve?"></textarea>
               </div>
-              <button type="submit" class="btn book-btn w-100">Book a demo</button>
+
+              <!-- Honeypot (hidden for real users; bots often fill it) -->
+              <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
+
+              <button type="submit" id="bookSubmitBtn" class="btn book-btn w-100">Book a demo</button>
             </form>
 
+
             <p class="small mt-3 clicking-form">
-             Clicking Next confirms your consent to receive updates from Aborn Solutions as per our Privacy Policy.
+              Clicking Next confirms your consent to receive updates from Aborn Solutions as per our Privacy Policy.
             </p>
           </div>
         </div>

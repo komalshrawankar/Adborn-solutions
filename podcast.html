@@ -24,27 +24,20 @@
 
   <section class="container seo-banner">
     <div class="row">
-      <div class="col-12 col-md-6 d-flex flex-column justify-content-center seo-col">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center seo-col2">
         <h1>
-          <p class="seo-high">Elevate Your Podcast 
+          <p class="seo-high pod-hero">Elevate Your Podcast 
  </p>
          with Expert Recording & Editing
         </h1>
        
         <p class="pod-para">Transform your ideas into powerful conversations that connect, engage, and inspire.</p>
-      </div>
-
-      <div class="col-12 col-md-6 seo-col podcast-img">
-       
-        <img src="./Images/podcast.jpg" alt="" srcset="" height="400px">
-      </div>
-
-     <div class="col-12 d-flex align-items-center flex-wrap "style="gap: 0.5rem;">
+          <div class="col-12 d-flex align-items-center flex-wrap pod-a "style="gap: 0.5rem; ">
   <!-- Free Consultation Button -->
-  <a href="#consultation" class="btn podcast-btn">Get a Free Consultation</a>
+  <a href="#consultation" class="btn podcast-btn mt-3">Get a Free Consultation</a>
 
   <!-- Listening Episode Button -->
-  <a href="https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUNcG9kY2FzdCBoaW5kaQ%3D%3D" target="_blank" class="btn btn-outline-light listen-btn d-flex align-items-center gap-2">
+  <a href="https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUNcG9kY2FzdCBoaW5kaQ%3D%3D" target="_blank" class="btn btn-outline-light listen-btn d-flex align-items-center gap-2 mt-3">
     <i class="fa-regular fa-circle-play fa-2x"></i> Listening Episode
   </a>
 </div>
@@ -67,6 +60,14 @@
 
   </div>
 
+      </div>
+
+      <div class="col-12 col-md-6 seo-col podcast-img ">
+       
+        <img src="./Images/podcast.jpg" alt="" srcset="" height="400px">
+      </div>
+
+   
  </div>
 <div class="col-12 mt-4">
   <div class="d-flex flex-wrap align-items-center gap-4 text-white">
@@ -331,7 +332,7 @@
         <!-- Card 1 -->
         <div class="swiper-slide">
           <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-            <img src="./Images/user.jpg" class="card-img-top" alt="Podcast">
+            <img src="./Images/Rectangle-437.png" class="card-img-top" alt="Podcast">
             <div class="card-body">
               <p class="card-text">We help creators, entrepreneurs, and businesses transform simple recordings into impactful podcasts...</p>
             </div>
@@ -341,7 +342,7 @@
         <!-- Card 2 -->
         <div class="swiper-slide">
           <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-            <img src="./Images/user.jpg" class="card-img-top" alt="Podcast">
+            <img src="./Images/Rectangle-437.png" class="card-img-top" alt="Podcast">
             <div class="card-body">
               <p class="card-text">We help creators, entrepreneurs, and businesses transform simple recordings into impactful podcasts...</p>
             </div>
@@ -351,7 +352,7 @@
         <!-- Card 3 -->
         <div class="swiper-slide">
           <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-            <img src="./Images/user.jpg" class="card-img-top" alt="Podcast">
+            <img src="./Images/Rectangle-437.png" class="card-img-top" alt="Podcast">
             <div class="card-body">
               <p class="card-text">We help creators, entrepreneurs, and businesses transform simple recordings into impactful podcasts...</p>
             </div>
@@ -759,6 +760,42 @@
     e.preventDefault();
     podcastSwiper.slideNext(); // go to next card
   });
+
 </script>
+<script>
+        const swiper = new Swiper('.review-slider', {
+            loop: true,
+            speed: 600,
+            slidesPerView: 1,
+            spaceBetween: 30,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+                992: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>

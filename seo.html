@@ -460,56 +460,90 @@
 
    </section>
 
- <section class="container section-spacing seo-section">
-  <h2>Achieve Measurable Growth with <span>SEO</span></h2>
-  <div class="seo-final swiper">
+  <!-- <section class="my-5">
+        <div class="seo-text1 text-center">
+            <h1>Achieve Measurable <br> Growth with SEO</h1>
+            <p>Data-Driven SEO for Measurable Growth <br>
+Our strategies are designed to deliver tangible, long-term success. Here’s a glimpse of <br> what our clients have achieved:</p>
+        </div>
+
+        <div class="seo-wrapper">
+ <div class="swiper ">
     <div class="swiper-wrapper">
-
-      <!-- Card 1 -->
       <div class="swiper-slide">
-        <div class="seo-card text-white p-4" style="background:#673ab7; border-radius:20px;">
-          <h4 class="fw-bold">+65,000</h4>
-          <p>new users/month for a leading electronics retailer in just 6 months.</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="icon" style="width:60px;">
+        <div class="seo1-card scard1">
+            <img src="./Images/seo-1.png" alt="">
+            <div class="seo-card-text">
+                <h3>+65,000</h3>
+                <span>new users/month for a leading electronics retailer in just 6 months.</span>
+            </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
       <div class="swiper-slide">
-        <div class="seo-card text-white p-4" style="background:#2196f3; border-radius:20px;">
-          <h4 class="fw-bold">8x</h4>
-          <p>Traffic growth for a pharmaceutical company - scaling from 5,000 to 40,000 users/month.</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="icon" style="width:60px;">
+        <div class="seo1-card scard2">
+            <img src="./Images/seo-2.png" alt="">
+            <div class="seo-card-text">
+                <h3>8x</h3>
+                <span>Traffic growth for a pharmaceutical company - scaling from 5,000 to 40,000 users/month. </span>
+            </div>
         </div>
       </div>
-
-      <!-- Card 3 -->
       <div class="swiper-slide">
-        <div class="seo-card text-white p-4" style="background:#f06292; border-radius:20px;">
-          <h4 class="fw-bold">+38%</h4>
-          <p>Organic traffic increases for a financial institution in half a year.</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="icon" style="width:60px;">
+        <div class="seo1-card scard3">
+            <img src="./Images/seo-3.png" alt="">
+            <div class="seo-card-text">
+                <h3>+38%</h3>
+                <span>Organic traffic increases for a financial institution in half a year.</span>
+            </div>
         </div>
       </div>
-
-      <!-- Card 4 -->
-      <div class="swiper-slide cut-card">
-        <div class="seo-card text-white p-4" style="background:#4caf50; border-radius:20px;">
-          <h4 class="fw-bold">+70,000</h4>
-          <p>new visitors/month across multiple marketplace versions in just 6 months.</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="icon" style="width:60px;">
+      <div class="swiper-slide">
+        <div class="seo1-card scard4">
+            <img src="./Images/seo-4.png" alt="">
+            <div class="seo-card-text">
+                <h3>+70,000</h3>
+                <span>new visitorss/month across multilingual marketplace versions in just 6 months.</span>
+            </div>
         </div>
       </div>
-
+      <div class="swiper-slide">
+        <div class="seo1-card scard5">
+            <img src="./Images/seo-5.png" alt="">
+            <div class="seo-card-text">
+                <h3>From 0 to 400</h3>
+                <span>monthly visitors - a brand - new RV dealership making its mark in just 6 months.</span>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="seo1-card scard6">
+            <img src="./Images/seo-6.png" alt="">
+            <div class="seo-card-text">
+                <h3>3x</h3>
+                <span>traffic growth for a niche local marketplace within a year.</span>
+            </div>
+        </div>
+      </div>
+     
+      
+ 
     </div>
 
-    <!-- Navigation arrows below -->
-    <div class="seo-navigation mt-3 text-center">
-      <button class="seo-prev btn btn-primary me-2">Prev</button>
-      <button class="seo-next btn btn-primary">Next</button>
+   
+     <div class="swiper-pagination"></div>
+    <div class="d-flex gap-3 w-25 justify-content-center seo-arrow-div">
+<div class="custom-prev1"><i class="fa-solid fa-chevron-left"></i> </div>
+    <div class="custom-next1"> <i class="fa-solid fa-chevron-right"></i></div>
     </div>
+    
   </div>
-</section>
+        </div>
+        
+     </section> --> 
+
+
+
+
 
 <!-- our works  -->
   <section class="container-fluid works-section">
@@ -877,12 +911,42 @@ Enterprise SEO is tailored for large websites with complex structures.
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
 
+  
+<script>
+        const swiper = new Swiper('.review-slider', {
+            loop: true,
+            speed: 600,
+            slidesPerView: 1,
+            spaceBetween: 30,
 
- 
-     
- 
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
 
-</script>
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+                992: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                }
+            }
+        });
+    </script>
+
 
 </body>
 

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        /* General Navbar Styling */
+        .navbar {
+            background-color: #fff;
+            /* padding: 1rem 2rem; */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            width: 80%;
+            border-radius: 50px;
+            margin: 20px auto;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #000;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #000;
+            margin-right:2px;
+        }
+
+
+        .nav-link:hover {
+            color: #6c63ff;
+        }
+
+
+
+        /* Mega Dropdown */
+        .dropdown-menu.mega-menu {
+            width: 700px;
+            padding: 2rem;
+            border-radius: 40px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(300px);
+        }
+
+
+        .mega-menu .col {
+            padding: 0 1rem;
+        }
+
+        .mega-menu h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .mega-menu a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .mega-menu a:hover {
+            color: #6c63ff;
+        }
+
+        /* Button */
+        .btn-book {
+            background: linear-gradient(90deg, #6c63ff, #a56eff);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 0.6rem 1.4rem;
+            font-weight: 600;
+        }
+
+        .btn-book:hover {
+            background: linear-gradient(90deg, #594cff, #8f52ff);
+            color: #fff;
+        }
+
+        @media (max-width: 992px) {
+            .dropdown-menu.mega-menu {
+                width: 100%;
+            }
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/adborn_logo.jpg" alt="Logo" height="40" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item dropdown position-static d-flex">
+                        <!-- Main link -->
+                        <a class="nav-link" href="OurServices.html">Our Services</a>
+
+                        <!-- Dropdown toggle arrow -->
+                        <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="display:inline-block; width: 20px; text-align:center; padding-left:5px;"></a>
+
+                        <!-- Mega menu -->
+                        <div class="dropdown-menu mega-menu mt-2" aria-labelledby="industriesDropdown">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Services</h6>
+                                    <p class="text-muted" style="font-size: 0.9rem;">
+                                        Tailored solutions to grow your business and achieve your goals.
+                                    </p>
+                                    <a href="#">View all Industries →</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="socialmedia.html">Social Media</a>
+                                    <a href="UIUX.html">UiUx</a>
+                                    <a href="seo.html">SEO</a>
+                                    <a href="influencer.html">Influencer</a>
+                                    <a href="emailwriting.html">Email Writing</a>
+                                    <a href="webdev.html">Web Development</a>
+                                    <a href="mobileapp.html">Mobile App Dev</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="videoediting.html">Video Editing</a>
+                                    <a href="podcast.html">Podcast Shoot</a>
+                                    <a href="blog.html">Blog</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+
+                    <!-- Mega Menu Dropdown -->
+                    <li class="nav-item dropdown position-static d-flex ">
+                        <!-- Main link -->
+                        <a class="nav-link" href="industries.html">Industries</a>
+
+                        <!-- Dropdown toggle arrow -->
+                        <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="display:inline-block; width: 20px; text-align:center; padding-left:5px;"></a>
+
+                        <!-- Mega menu -->
+                        <div class="dropdown-menu mega-menu mt-2" aria-labelledby="industriesDropdown">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Industries</h6>
+                                    <p class="text-muted" style="font-size: 0.9rem;">
+                                        Our strategies are tailored to meet the unique challenges of each industry.
+                                    </p>
+                                    <a href="#">View all Industries →</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="#">B2B</a>
+                                    <a href="#">Web3</a>
+                                    <a href="#">Fintech</a>
+                                    <a href="#">IGaming</a>
+                                    <a href="#">Forex</a>
+                                    <a href="#">Gaming</a>
+                                    <a href="#">AI</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="#">B2C</a>
+                                    <a href="#">SaaS</a>
+                                    <a href="#">Ecommerce</a>
+                                    <a href="#">IT & Software</a>
+                                    <a href="#">Real Estate</a>
+                                    <a href="#">Healthcare</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Prople</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Company</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-book">Book Intro Call</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

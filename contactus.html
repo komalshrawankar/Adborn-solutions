@@ -55,27 +55,22 @@
         <!-- Right Form -->
         <div class="col-lg-6 book-call">
           <div class="form-card book-call">
-            <div class="mb-3 contact-head text-start fs-2">BOOK A CALL WITH US</div>
+            <div class="mb-2 contact-head text-start fs-2">BOOK A CALL WITH US</div>
             <p class="small text-muted">(please wait 5 seconds for the calendar to load after clicking the button)</p>
 
-            <form class="book-input">
-              <div class="mb-3">
-                <input type="text" class="form-control" placeholder="First Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Last Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" required>
-              </div>
-              <div class="mb-3">
-                <input type="tel" class="form-control" placeholder="+91 (optional)">
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" rows="2" placeholder="What tasks would you like to solve?"></textarea>
-              </div>
-              <button type="submit" class="btn btn-contact w-100">Book a demo</button>
-            </form>
+           <form id="bookForm" class="book-input" autocomplete="off" novalidate>
+  <input type="text" id="firstName" name="firstName" class="form-control mb-3" placeholder="First Name" required>
+  <input type="text" id="lastName" name="lastName" class="form-control mb-3" placeholder="Last Name" required>
+  <input type="email" id="email" name="email" class="form-control mb-3" placeholder="Email" required>
+  <input type="tel" id="phone" name="phone" class="form-control mb-3" placeholder="+91 (optional)">
+  <textarea id="message" name="message" class="form-control mb-3" rows="2" placeholder="What tasks would you like to solve?"></textarea>
+
+  <!-- Honeypot -->
+  <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
+
+  <button type="submit" id="bookSubmitBtn" class="btn book-btn btn-contact w-100">Book a demo</button>
+</form>
+
 
            
           </div>
@@ -178,6 +173,11 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script src="./script.js"> </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initBookForm(); // Initialize the form submission
+  });
+</script>
 
 </body>
 </html>
