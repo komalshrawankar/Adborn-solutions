@@ -27,8 +27,8 @@
     <!-- hero section -->
     <section class="container text-center py-5 career-hero position-relative">
         <!-- Labels -->
-        <div class="career-label graphic-designer">Graphic Designer</div>
-        <div class="career-label smm-manager">SMM Manager</div>
+        <div class="career-label graphic-designer career-graphic">Graphic Designer</div>
+        <div class="career-label smm-manager career-manager">SMM Manager</div>
         <div class="career-label strategist">Strategist</div>
         <div class="career-label account-manager">Account Manager</div>
 
@@ -398,9 +398,9 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <script src="./script.js"> </script>
+  
 
-    <script>
+  <!-- <script>
   const btn = document.querySelector('.btn-all-vacancies');
   const extraJobs = document.querySelectorAll('.extra-job');
 
@@ -409,7 +409,56 @@
     extraJobs.forEach(job => job.style.display = 'block'); // show hidden jobs
     btn.style.display = 'none'; // hide the button after click
   });
+</script> -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  // Extra jobs button
+  const btn = document.querySelector('.btn-all-vacancies');
+  const extraJobs = document.querySelectorAll('.extra-job');
+
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      extraJobs.forEach(job => job.style.display = 'block');
+      btn.style.display = 'none';
+    });
+  }
+
+  // Career form submission
+  const form = document.getElementById("careerForm");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      console.log("🚀 Career form submit intercepted!");
+
+      const formData = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        const response = await fetch("http://localhost:5000/api/career", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+        console.log("📥 Server response:", data);
+
+        if (response.ok) {
+          alert("✅ Application submitted successfully!");
+          form.reset();
+        } else {
+          alert("❌ " + (data.message || "Failed to submit form."));
+        }
+      } catch (err) {
+        console.error(err);
+        alert("⚠️ Something went wrong.");
+      }
+    });
+  }
+});
+
 </script>
+  <script src="./script.js"> </script>
 
 </body>
 

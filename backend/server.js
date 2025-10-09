@@ -1,16 +1,10 @@
 import dotenv from "dotenv";
 dotenv.config();
-
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
-
 import connectDB from "./config/db.js";
 import formRoutes from "./routes/formRoutes.js";
-import careerRoutes from "./routes/career.js";
-
-
-
+import careerRoutes from "./routes/careerRoutes.js";
 
 const app = express();
 
@@ -25,8 +19,6 @@ connectDB();
 // Routes
 app.use("/api/forms", formRoutes);
 app.use("/api/career", careerRoutes);
-
-
 
 // Server
 const PORT = process.env.PORT || 5000;

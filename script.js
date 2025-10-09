@@ -1,33 +1,33 @@
  console.log("Script loaded and running");
-// Wait until DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+/// Wait until DOM is fully loaded
+//document.addEventListener("DOMContentLoaded", () => {
   // ===============================
   // 1. Custom Horizontal Slider
   // ===============================
-  const slider = document.getElementById("slider");
-  if (slider) {
-    let currentIndex = 0;
+//   const slider = document.getElementById("slider");
+//   if (slider) {
+//     let currentIndex = 0;
 
-    function scrollSlider(direction) {
-      const cardWidth =
-        slider.querySelector(".col-md-6").offsetWidth + 20; // include gap
-      currentIndex = Math.min(
-        Math.max(currentIndex + direction, 0),
-        slider.children.length - 2 // adjust for visible cards
-      );
-      slider.scrollTo({
-        left: currentIndex * cardWidth,
-        behavior: "smooth",
-      });
-    }
+//     function scrollSlider(direction) {
+//       const cardWidth =
+//         slider.querySelector(".col-md-6").offsetWidth + 20; // include gap
+//       currentIndex = Math.min(
+//         Math.max(currentIndex + direction, 0),
+//         slider.children.length - 2 // adjust for visible cards
+//       );
+//       slider.scrollTo({
+//         left: currentIndex * cardWidth,
+//         behavior: "smooth",
+//       });
+//     }
 
-    // Auto-scroll on mouse wheel
-    slider.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      scrollSlider(e.deltaY > 0 ? 1 : -1);
-    });
-  }
-});
+//     // Auto-scroll on mouse wheel
+//     slider.addEventListener("wheel", (e) => {
+//       e.preventDefault();
+//       scrollSlider(e.deltaY > 0 ? 1 : -1);
+//     });
+//   }
+// });
   // ===============================
   // 2. Swipers
   // ===============================
@@ -37,13 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeSwiper = new Swiper(".home-swiper", {
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 5000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".home-swiper .swiper-pagination",
         clickable: true,
       },
+        navigation: {
+      nextEl: ".custom-next",
+      prevEl: ".custom-prev",
+    },
       slidesPerView: 3,
       breakpoints: {
         640: { slidesPerView: 2, spaceBetween: 20 },
@@ -51,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
 
   // About page Swiper (manual nav, no autoplay)
   if (document.querySelector(".about-swiper")) {
@@ -131,12 +136,109 @@ loadHTML("footer.html", "footer", () => {
   initBookForm(); // Attach the form event listener now
 });
 
-loadHTML("ourwork.html", "ourwork");
+loadHTML("ourwork.html", "ourwork", initOurWork);
+
 loadHTML("expert.html", "expert");
 loadHTML("rating.html", "rating", initSwiper);
 
 // ✅ Load carousel + initialize Swiper only after injection
 loadHTML("carousel.html", "carousel", initPartnerSwiper);
+
+
+
+// !-- OUR WORKS SLIDER SECTION --
+
+function initOurWork() {
+  const workData = [
+    { category: "all", title: "B2B Project 1", desc: "B2B project example 1", img: "https://picsum.photos/400/200?random=1", views: "517507", likes: "7701", reposts: "2530", comments: "2343" },
+    { category: "B2B", title: "B2B Project 2", desc: "B2B project example 2", img: "https://picsum.photos/400/200?random=6", views: "431200", likes: "6700", reposts: "1900", comments: "1600" },
+    { category: "B2C", title: "B2C Project 1", desc: "B2C project example", img: "https://picsum.photos/400/200?random=2", views: "420891", likes: "6890", reposts: "2230", comments: "2104" },
+    { category: "E-commerce", title: "E-commerce Project 1", desc: "E-commerce project", img: "https://picsum.photos/400/200?random=3", views: "398123", likes: "6405", reposts: "1921", comments: "1750" },
+    { category: "Fintech", title: "Fintech Project 1", desc: "Fintech project", img: "https://picsum.photos/400/200?random=4", views: "512000", likes: "7021", reposts: "2100", comments: "1850" },
+    { category: "Gaming", title: "Gaming Project 1", desc: "Gaming project", img: "https://picsum.photos/400/200?random=5", views: "609000", likes: "8900", reposts: "3200", comments: "2500" },
+    { category: "Healthcare", title: "Healthcare Project 1", desc: "Healthcare project", img: "https://picsum.photos/400/200?random=7", views: "350000", likes: "6000", reposts: "1800", comments: "1500" },
+    { category: "iGaming", title: "iGaming Project 1", desc: "iGaming project", img: "https://picsum.photos/400/200?random=8", views: "290000", likes: "4500", reposts: "1200", comments: "1100" },
+    { category: "IT & Software", title: "IT Project 1", desc: "IT & Software project", img: "https://picsum.photos/400/200?random=9", views: "410000", likes: "6800", reposts: "2000", comments: "1700" },
+    { category: "Real estate", title: "Real Estate Project 1", desc: "Real estate project", img: "https://picsum.photos/400/200?random=10", views: "560000", likes: "7500", reposts: "2400", comments: "2000" },
+    { category: "SaaS", title: "SaaS Project 1", desc: "SaaS project", img: "https://picsum.photos/400/200?random=11", views: "470000", likes: "7100", reposts: "2100", comments: "1800" },
+    { category: "Web3", title: "Web3 Project 1", desc: "Web3 project", img: "https://picsum.photos/400/200?random=12", views: "300000", likes: "5000", reposts: "1500", comments: "1300" },
+  ];
+
+  let currentIndex = 0;
+  let filteredData = [...workData];
+  const sliderInner = document.getElementById("slider-inner");
+  const nextBtn = document.getElementById("next-btn");
+  const prevBtn = document.getElementById("prev-btn");
+
+  function renderSlides(data) {
+    if (!sliderInner) return;
+    sliderInner.innerHTML = "";
+    data.forEach(item => {
+      const slide = document.createElement("div");
+      slide.classList.add("work-slide");
+      slide.innerHTML = `
+        <div class="work-media"><img src="${item.img}" alt="${item.title}"></div>
+        <div class="work-content">
+          <div class="work-title">${item.title}</div>
+          <div class="work-desc">${item.desc}</div>
+          <div class="work-stats">
+            <div class="stat-box"><div class="stat-value">${item.views}</div><div class="stat-label">Views</div></div>
+            <div class="stat-box"><div class="stat-value">${item.likes}</div><div class="stat-label">Likes</div></div>
+            <div class="stat-box"><div class="stat-value">${item.reposts}</div><div class="stat-label">Reposts</div></div>
+            <div class="stat-box"><div class="stat-value">${item.comments}</div><div class="stat-label">Comments</div></div>
+          </div>
+          <button class="work-btn">Read More</button>
+        </div>
+      `;
+      sliderInner.appendChild(slide);
+    });
+    updateSlider();
+  }
+
+  function updateSlider() {
+    if (!sliderInner) return;
+    sliderInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % filteredData.length;
+      updateSlider();
+    });
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + filteredData.length) % filteredData.length;
+      updateSlider();
+    });
+  }
+
+  const filterButtons = document.querySelectorAll(".tag-btn");
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const category = btn.dataset.category;
+        filteredData = category === "all" ? [...workData] : workData.filter(w => w.category === category);
+        currentIndex = 0;
+        renderSlides(filteredData);
+      });
+    });
+  }
+
+  // Touch swipe support
+  let startX = 0;
+  if (sliderInner) {
+    sliderInner.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
+    sliderInner.addEventListener("touchend", e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) { currentIndex = (currentIndex + 1) % filteredData.length; updateSlider(); }
+      if (endX - startX > 50) { currentIndex = (currentIndex - 1 + filteredData.length) % filteredData.length; updateSlider(); }
+    });
+  }
+
+  renderSlides(filteredData);
+}
+
 
 function initPartnerSwiper() {
   console.log("Carousel HTML injected!");
@@ -402,6 +504,67 @@ function initBookForm() {
     }, 5000);
   }
 }
+
+// Career Form Submission with Custom Toast Message
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("✅ DOM fully loaded");
+
+  const form = document.getElementById("careerForm");
+  if (!form) {
+    console.warn("⚠️ No form found on this page!");
+    return;
+  }
+
+  console.log("✅ Form found:", form);
+
+  //  Function to show custom toast message
+  function showToast(message, type = "success") {
+    const toast = document.createElement("div");
+    toast.className = `toast-message ${type}`;
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    // Animate in
+    setTimeout(() => toast.classList.add("show"), 100);
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 500);
+    }, 4000);
+  }
+
+  //  Handle form submission
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // 🚫 Stop default form submission
+    console.log("🚀 Form submission event triggered!");
+
+    const formData = Object.fromEntries(new FormData(form).entries());
+    console.log("📦 Form Data:", formData);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/career", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("📥 Server Response:", data);
+
+      if (response.ok) {
+        showToast("✅ Application submitted successfully!");
+        form.reset();
+      } else {
+        showToast("❌ " + (data.message || "Failed to submit form."), "error");
+      }
+    } catch (error) {
+      console.error("🔥 Error submitting form:", error);
+      showToast("⚠️ Something went wrong. Please try again later.", "error");
+    }
+  });
+});
 
 
 //career form
