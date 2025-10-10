@@ -4,34 +4,26 @@ body {
   color: #fff;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0; 
   overflow-x: hidden;
+  
 }
 
+.main-content {
+  padding-top: 80px; /* same height as navbar */
+}
 
 /* ---------- Desktop (default) ---------- */
 
 
-/* .navbar {
-  background: #fff;
-  border-radius: 36rem;
-  align-items: center;
-  width: 70%;
-  margin-top: 2rem;
-}
-.navbar .nav-link {
-  color: #000 !important;
-  font-weight: 500;
-}
-  */
+  
 /* new navbar */
  .navbar {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 50px;
-    margin-top:10px;
     position: fixed; 
-    top:10;          
+    top:10px;          
     left: 50%;       
     transform: translateX(-50%); /* center properly */
     width: 80%;      /* your desired width */
@@ -1971,6 +1963,9 @@ span.highlight-2 {
   font-size: 50px;
   font-weight: 500;
 }
+.about-top{
+  margin-top:120px;
+}
 
 .about-banner p {
   width: 70%;
@@ -2011,6 +2006,8 @@ span.highlight-2 {
   background-image: url("../Images/about-banner-bg.png");
   background-size: cover;
   background-position: center;
+  min-height: 100vh; /* full screen */
+  padding-top: 0 !important; /* override body padding-top */
 }
 
 .about-highligth {
@@ -5329,7 +5326,7 @@ a.listen-btn:hover i.fa-circle-play {
 }
 
 .contact-us {
-  /* margin-top:100px; */
+  margin-top:50px; 
 }
 
 .book-call {
@@ -5378,12 +5375,8 @@ a.listen-btn:hover i.fa-circle-play {
   background: transparent;
   white-space: nowrap;
 }
-.career-graphic{
-  margin-top:80px;
-}
-.career-manager{
-  margin-top:80px;
-}
+
+
 
 /* --- Desktop Placement (closer to heading) --- */
 .graphic-designer {
@@ -5518,9 +5511,14 @@ a.listen-btn:hover i.fa-circle-play {
 }
 
 .parent-class {
+  margin-top: 80px;
+} 
+.career-graphic{
   margin-top: 70px;
 }
-
+.career-manager{
+ margin-top:70px;
+}
 .work-img {
   height: 300px;
   /* take full height of parent */
@@ -5983,3 +5981,12 @@ a.listen-btn:hover i.fa-circle-play {
 .seo-text1 p {
   color: gray;
 }
+.big-cirle{
+  margin-right:100px;
+}
+
+
+/* changes vali css */
+ /* .seo-banner{
+  margin-top: 100px;
+ } */

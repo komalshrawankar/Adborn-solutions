@@ -7,7 +7,7 @@ export const submitCareerForm = async (req, res) => {
 
     // 1️⃣ Save applicant to MongoDB
     const newApplication = await CareerForm.create(formData);
-    console.log("✅ Application saved:", newApplication);
+    // console.log("✅ Application saved:", newApplication);
 
     // 2️⃣ Configure Nodemailer
     const transporter = nodemailer.createTransport({
@@ -37,9 +37,9 @@ export const submitCareerForm = async (req, res) => {
       };
 
       const applicantInfo = await transporter.sendMail(applicantMailOptions);
-      console.log("✅ Email sent to applicant:", applicantInfo.accepted);
+      //console.log("✅ Email sent to applicant:", applicantInfo.accepted);
     } catch (err) {
-      console.error("❌ Failed to send email to applicant:", err);
+       console.error("❌ Failed to send email to applicant:", err);
     }
 
     // 4️⃣ Email to admin
@@ -61,7 +61,7 @@ export const submitCareerForm = async (req, res) => {
       };
 
       const adminInfo = await transporter.sendMail(adminMailOptions);
-      console.log("✅ Email sent to admin:", adminInfo.accepted);
+      //console.log("✅ Email sent to admin:", adminInfo.accepted);
     } catch (err) {
       console.error("❌ Failed to send email to admin:", err);
     }

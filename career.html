@@ -25,7 +25,7 @@
     <div id="header"></div>
 
     <!-- hero section -->
-    <section class="container text-center py-5 career-hero position-relative">
+    <section class="container text-center py-5 career-hero position-relative main-content">
         <!-- Labels -->
         <div class="career-label graphic-designer career-graphic">Graphic Designer</div>
         <div class="career-label smm-manager career-manager">SMM Manager</div>
@@ -43,7 +43,10 @@
                 If you're driven, smart, enthusiastic, and seeking a fulfilling workplace,
                 Adborn Solutions <br> could be your final resume destination.
             </p>
-            <button class="btn-contact mt-4 px-5 py-2">Grow With Us</button>
+            <a href="contactus.html">
+             <button class="btn-contact mt-4 px-5 py-2">Grow With Us</button>
+            </a>
+            
         </div>
     </section>
 
@@ -51,22 +54,89 @@
    <div id="carousel"></div>
 
     <section>
-        <div class="container mt-5">
-            <div class="row  d-flex justify-content-around ">
-                <div class="col-5 d-flex justify-content-center">
-                  <div class="work-img"><img src="" alt="" srcset=""></div>
-                </div>
-                <div class="col-5 d-flex flex-column justify-content-center">
-                   <h5>Working here is truly an amazing journey! With a supportive team, collaborative spirit, and dedication to innovation, every day brings fresh learning, growth, and endless inspiration.</h5>
-                   <div class="d-flex flex-column mt-3">
-                    <h5>Jessica</h5>
-                    <p> Digital Marketing Strategist</p>
-                </div>
-                </div>
-                
+  <div class="container mt-5">
+    <div class="swiper work-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide d-flex justify-content-around align-items-center">
+          <div class="col-5 d-flex justify-content-center">
+            <div class="work-img"><img src="image1.jpg" alt="Jessica"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center">
+            <h5>Working here is truly an amazing journey! With a supportive team, collaborative spirit, and dedication to innovation, every day brings fresh learning, growth, and endless inspiration.</h5>
+            <div class="d-flex flex-column mt-3">
+              <h5>Vishvajeet Patil</h5>
+              <p>Digital Marketing Strategist</p>
             </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide d-flex justify-content-around align-items-center">
+          <div class="col-5 d-flex justify-content-center">
+            <div class="work-img"><img src="image2.jpg" alt="Mark"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center">
+            <h5>"I’ve developed both professionally and personally here. The mentorship and collaborative environment make every project exciting and rewarding."</h5>
+            <div class="d-flex flex-column mt-3">
+              <h5>Komal Shrawankar</h5>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more slides as needed -->
+          <!-- Slide 3-->
+        <div class="swiper-slide d-flex justify-content-around align-items-center">
+          <div class="col-5 d-flex justify-content-center">
+            <div class="work-img"><img src="image2.jpg" alt="Mark"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center">
+            <h5>"The culture here is amazing — open communication, innovation, and a focus on employee wellbeing. I truly feel valued as part of the team."</h5>
+            <div class="d-flex flex-column mt-3">
+              <h5>Dhanshree Joshi</h5>
+              <p>Digital Marketer</p>
+            </div>
+          </div>
+        </div>
+         <!-- Slide 4-->
+        <div class="swiper-slide d-flex justify-content-around align-items-center">
+          <div class="col-5 d-flex justify-content-center">
+            <div class="work-img"><img src="image2.jpg" alt="Mark"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center">
+            <h5>"Adborn Solutions encourages a healthy work-life balance while still pushing us to achieve our best. The flexibility has helped me grow in my role."</h5>
+            <div class="d-flex flex-column mt-3">
+              <h5>Manas Patni</h5>
+              <p>UIUX Designer</p>
+            </div>
+          </div>
+        </div>
+         <!-- Slide 5 -->
+        <div class="swiper-slide d-flex justify-content-around align-items-center">
+          <div class="col-5 d-flex justify-content-center">
+            <div class="work-img"><img src="image2.jpg" alt="Mark"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center">
+            <h5>"I joined as a junior developer and, within a year, I’ve grown into a full-stack role thanks to the training and mentorship provided."</h5>
+            <div class="d-flex flex-column mt-3">
+              <h5>Sayali Kohad</h5>
+              <p>Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next " style="color: white;"></div>
+      <div class="swiper-button-prev big-cirle" style="color: white;"></div>
+
+      <!-- Pagination (optional) -->
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </div>
+</section>
+
 
 
     <section>
@@ -400,65 +470,34 @@
 
   
 
-  <!-- <script>
-  const btn = document.querySelector('.btn-all-vacancies');
-  const extraJobs = document.querySelectorAll('.extra-job');
-
-  btn.addEventListener('click', function(e) {
-    e.preventDefault(); // prevent default link action
-    extraJobs.forEach(job => job.style.display = 'block'); // show hidden jobs
-    btn.style.display = 'none'; // hide the button after click
+  
+  <script>
+    if (document.querySelector(".work-swiper")) {
+  const workSwiper = new Swiper(".work-swiper", {
+    loop: true,
+    slidesPerView: 1, // show one testimonial at a time
+    spaceBetween: 30,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".work-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".work-swiper .swiper-button-next",
+      prevEl: ".work-swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 1 },
+      992: { slidesPerView: 1 },
+    },
   });
-</script> -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  // Extra jobs button
-  const btn = document.querySelector('.btn-all-vacancies');
-  const extraJobs = document.querySelectorAll('.extra-job');
+}
 
-  if (btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      extraJobs.forEach(job => job.style.display = 'block');
-      btn.style.display = 'none';
-    });
-  }
-
-  // Career form submission
-  const form = document.getElementById("careerForm");
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      console.log("🚀 Career form submit intercepted!");
-
-      const formData = Object.fromEntries(new FormData(form).entries());
-
-      try {
-        const response = await fetch("http://localhost:5000/api/career", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-
-        const data = await response.json();
-        console.log("📥 Server response:", data);
-
-        if (response.ok) {
-          alert("✅ Application submitted successfully!");
-          form.reset();
-        } else {
-          alert("❌ " + (data.message || "Failed to submit form."));
-        }
-      } catch (err) {
-        console.error(err);
-        alert("⚠️ Something went wrong.");
-      }
-    });
-  }
-});
-
-</script>
-  <script src="./script.js"> </script>
+  </script>
+<script src="script.js"> </script>
 
 </body>
 

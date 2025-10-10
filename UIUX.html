@@ -24,7 +24,7 @@
   <div id="header"></div>
   <!-- banner section  -->
 
-  <section class="container seo-banner">
+  <section class="container seo-banner main-content">
     <div class="row">
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center seo-col">
         <h1>
@@ -258,7 +258,7 @@ What we excel at — and what we stand accountable for.</h1>
                     <h2>Pixel-Perfect Interfaces</h2>
                     <span>We craft visually stunning designs with unmatched precision, ensuring every detail speaks excellence.</span>
                   </div>
-                  <img src="./Images/d1.png" alt="">
+                  <img src="./Images/uiux1.png" alt="" height="70px">
 
 
                 </div>
@@ -279,7 +279,7 @@ What we excel at — and what we stand accountable for.</h1>
                     <h2>Intuitive Navigation</h2>
                     <span>Ensuring seamless user journeys with clarity and simplicity.</span>
                   </div>
-                  <img src="./Images/d2.png" alt="">
+                  <img src="./Images/uiux-2.png" alt="">
 
 
                 </div>
@@ -304,7 +304,7 @@ What we excel at — and what we stand accountable for.</h1>
                     <span>Designing interfaces that strengthen brand identity across platforms.
 </span>
                   </div>
-                  <img src="./Images/d1.png" alt="">
+                  <img src="./Images/uiux-3.png" alt="" height="75px">
 
 
                 </div>
@@ -327,7 +327,7 @@ What we excel at — and what we stand accountable for.</h1>
                     <span> Delivering flawless experiences across all devices and screens.
 </span>
                   </div>
-                  <img src="./Images/d2.png" alt="">
+                  <img src="./Images/uiux-4png.png" alt="">
 
 
                 </div>
@@ -353,7 +353,7 @@ What we excel at — and what we stand accountable for.</h1>
                     <span>Adding subtle yet impactful details that enhance engagement.
 </span>
                   </div>
-                  <img src="./Images/d1.png" alt="">
+                  <img src="./Images/uiux-5.png" alt="" height="70px">
 
 
                 </div>
@@ -437,57 +437,7 @@ What we excel at — and what we stand accountable for.</h1>
   </section>
 
   <!-- our works  -->
-  <section class="container-fluid works-section">
-
-    <h2 class="works-title pt-5 fs-1">Our Works</h2>
-
-
-    <div class="filter-tags ">
-      <button class="tag-btn active">All Cases</button>
-      <button class="tag-btn g-5">B2B</button>
-      <button class="tag-btn">B2C</button>
-      <button class="tag-btn">E-commerce</button>
-      <button class="tag-btn">Fintech</button>
-      <button class="tag-btn">Gaming</button>
-      <button class="tag-btn">Healthcare</button>
-      <button class="tag-btn">iGaming </button>
-      <button class="tag-btn">IT & Software</button>
-      <button class="tag-btn">Real estate</button>
-      <button class="tag-btn">SaaS</button>
-      <button class="tag-btn">Web3</button>
-    </div>
-
-
-    <div class="work-card mt-3">
-      <div class="work-media"></div>
-      <div class="work-stats">
-        <div class="stat-box">
-          <div class="stat-value">517507</div>
-          <div class="stat-label">Views</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">7701</div>
-          <div class="stat-label">Likes</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">2530</div>
-          <div class="stat-label">Reposts</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">2343</div>
-          <div class="stat-label">Comments</div>
-        </div>
-        <button class="work-btn">Read more</button>
-      </div>
-    </div>
-
-
-    <div class="work-footer mt-4">
-      <button class="story-btn">See More Success Stories</button>
-      <button class="nav-arrow">&lt;</button>
-      <button class="nav-arrow">&gt;</button>
-    </div>
-  </section>
+ <div id="ourwork"></div>
  <div id="rating"></div>
   <!-- our Subscription -->
   <section class="container">
@@ -911,6 +861,40 @@ What we excel at — and what we stand accountable for.</h1>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script>
+        const swiper = new Swiper('.review-slider', {
+            loop: true,
+            speed: 600,
+            slidesPerView: 1,
+            spaceBetween: 30,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+                992: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                }
+            }
+        });
+    </script> 
   <script src="./script.js"></script>
 
 </body>
