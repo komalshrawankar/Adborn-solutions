@@ -41,8 +41,10 @@
       </p>
       <div class="about-btn">
         <a href="contactus.html">Book Your First Call</a>
-        <a href="ourpeople.html">Meet Adborn Solution </a>
-        <img src="./Images/Component 39.png" alt="" srcset="">
+        <a href="ourpeople.html">Meet Adborn Solution 
+          <img src="./Images/Component 39.png" alt="" srcset="">
+        </a>
+        
 
 
       </div>
@@ -81,10 +83,12 @@
       <div class="col-12 col-md-7">
         <div class="row ninja-span">
           <div class="col-12 col-md-6">
-            <div class="high-card2">
-              <img src="./Images/Play.png" alt="" srcset="">
-              <span>Ninja Promo CEO at the Blockchain Life Conference, Dubai 2023</span>
-            </div>
+            <div class="high-card2" id="videoCard">
+    <img src="./Images/Play.png" alt="Play">
+    <span>Ninja Promo CEO at the Blockchain Life Conference, Dubai 2023</span>
+    <video id="promoVideo" src="./Videos/demovideo.mp4"></video>
+  </div>
+
           </div>
           <div class="col-12 col-md-6">
             <div class="high-card3">
@@ -106,7 +110,7 @@
   </section>
 
   <!-- expert section  -->
-  <section class="container section-spacing expert-section">
+  <section class="container section-spacing expert-section mt-5">
     <h2>Our expert <span>articles</span></h2>
     <div class="row">
       <div class="col-12">
@@ -465,11 +469,13 @@
 
           <!-- Pagination & Navigation -->
 
-          <div class="custom-prev"><i class="fa-solid fa-arrow-left"></i> </div>
-          <div class="custom-next"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="custom-prev "><i class="fa-solid fa-arrow-left arrow-prev"></i> </div>
+          <div class="custom-next "><i class="fa-solid fa-arrow-right arrow-next"></i></div>
+
+        
 
         </div>
-
+        
       </div>
 
     </div>
@@ -957,6 +963,32 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script src="script.js"></script>
+  <script>
+     const card = document.getElementById('videoCard');
+    const img = card.querySelector('img');
+    const text = card.querySelector('span');
+    const video = card.querySelector('#promoVideo');
+    let isPlaying = false;
+
+    card.addEventListener('click', () => {
+      if (!isPlaying) {
+        // ▶️ Show and autoplay video
+        img.style.display = 'none';
+        text.style.display = 'none';
+        video.style.display = 'block';
+        video.currentTime = 0; // start from beginning
+        video.play();
+        isPlaying = true;
+      } else {
+        // ⏹ Stop video and show image again
+        video.pause();
+        video.style.display = 'none';
+        img.style.display = 'block';
+        text.style.display = 'block';
+        isPlaying = false;
+      }
+    });
+  </script>
 
   
 </body>

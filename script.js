@@ -594,54 +594,54 @@ document.addEventListener("DOMContentLoaded", () => {
       expandedExplore = !expandedExplore;
     });
   }
+   // 6️⃣ Index Explore Section
+  const indexExploreBtn = document.getElementById("indexexplore-btn");
+  if (indexExploreBtn) {
+    indexExploreBtn.addEventListener("click", function () {
+      const hiddenCards = document.getElementById("hidden-team");
+      if (hiddenCards.style.display === "none" || hiddenCards.style.display === "") {
+        hiddenCards.style.display = "flex";
+        hiddenCards.style.flexWrap = "wrap";
+        this.textContent = "Show Less";
+      } else {
+        hiddenCards.style.display = "none";
+        this.textContent = "Explore Team";
+      }
+    });
+  }
+// 7️⃣ AdBorn Experience Slider (Unique)
+const expTrack = document.querySelector("#adbornExpSlider .exp-slide-track");
+const expSlides = document.querySelectorAll("#adbornExpSlider .exp-slide-card");
+const expPrev = document.getElementById("expPrev");
+const expNext = document.getElementById("expNext");
+
+let expIndex = 0;
+
+// ✅ Run only if the slider exists on this page
+if (expTrack && expSlides.length > 0) {
+  function showExpSlide(index) {
+    expTrack.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  expNext?.addEventListener("click", () => {
+    expIndex = (expIndex + 1) % expSlides.length;
+    showExpSlide(expIndex);
+  });
+
+  expPrev?.addEventListener("click", () => {
+    expIndex = (expIndex - 1 + expSlides.length) % expSlides.length;
+    showExpSlide(expIndex);
+  });
+
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    expIndex = (expIndex + 1) % expSlides.length;
+    showExpSlide(expIndex);
+  }, 5000);
+}
+
 });
 
-// Career Form Submission with Custom Toast Message
-//document.addEventListener("DOMContentLoaded", () => {
-  // 🔹 Extra jobs button
- // const btn = document.querySelector('.btn-all-vacancies');
-  // const extraJobs = document.querySelectorAll('.extra-job');
-
-  // if (btn) {
-  //   btn.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     extraJobs.forEach(job => job.style.display = 'block');
-  //     btn.style.display = 'none';
-  //   });
-  // }
-
-  // 🔹 Career form submission
-//   const form = document.getElementById("careerForm");
-//   if (form) {
-//     form.addEventListener("submit", async (e) => {
-//       e.preventDefault();
-//       console.log("🚀 Career form submit intercepted!");
-
-//       const formData = Object.fromEntries(new FormData(form).entries());
-
-//       try {
-//         const response = await fetch("http://localhost:5000/api/career", {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify(formData),
-//         });
-
-//         const data = await response.json();
-//         console.log("📥 Server response:", data);
-
-//         if (response.ok) {
-//           alert("✅ Application submitted successfully!");
-//           form.reset();
-//         } else {
-//           alert("❌ " + (data.message || "Failed to submit form."));
-//         }
-//       } catch (err) {
-//         console.error("❌ Error submitting form:", err);
-//         alert("⚠️ Something went wrong.");
-//       }
-//     });
-//   }
-// });
 
 
 

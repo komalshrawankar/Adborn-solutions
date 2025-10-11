@@ -809,6 +809,7 @@ span.highlight-2 {
   justify-content: center;
   align-items: center;
   margin: 30px 0;
+  font-family: "Inter", sans-serif;
 }
 
 .avatar {
@@ -884,21 +885,121 @@ span.highlight-2 {
   color: black;
 }
 
-.card1 {
-  margin-top: 300px;
+.card1{
+  margin-top:260px !important;
+  
+}
+.card1-1{
+  margin-top:200px !important;
 }
 
 .card2 {
-  margin-top: 200px;
+  margin-top: 160px;
+}
+.card2-2{
+  margin-top: 100px;
 }
 
 .card3 {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+.card3-3 {
+  margin-top: 0px;
 }
 
 .card4 {
   margin-top: 0px;
 }
+/* Container */
+.adborn-exp-slider {
+  width: 100%;
+  max-width: 950px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Slide Track */
+.exp-slide-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+/* Each Slide */
+.exp-slide-card {
+  flex: 0 0 100%; /* Only one visible at a time */
+  background:#1B1B1B;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0; /* No side cuts */
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Content sections */
+.exp-left {
+  flex: 1 1 40%;
+  background:#1B1B1B;
+  border-right: 1px solid #eee;
+ 
+}
+
+.exp-right {
+  flex: 1 1 60%;
+}
+
+.exp-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.exp-arrow {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 8px 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.exp-arrow:first-child {
+  transform: translateX(-120%); /* visually move left arrow outside */
+}
+
+.exp-arrow:last-child {
+  transform: translateX(120%);  /* visually move right arrow outside */
+}
+
+.exp-arrow:hover {
+  background: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exp-slide-card {
+    flex-direction: column;
+  }
+  .exp-left, .exp-right {
+    flex: 1 1 100%;
+    border-right: none;
+  }
+}
+
 
 .card-hidden-text {
   color: white;
@@ -913,6 +1014,8 @@ span.highlight-2 {
 .card-custom-body:hover .card-hidden-text {
   opacity: 1;
   max-height: 200px;
+ 
+
 }
 
 /* Team */
@@ -933,7 +1036,9 @@ span.highlight-2 {
   color: black;
   transition-duration: 0.5s;
 }
-
+#hidden-team{
+  display:none;
+}
 .circle {
   width: 80px;
   height: 80px;
@@ -2604,7 +2709,7 @@ width:20px; */
 } */
 
 .partner-prev {
-  left: 0;
+  left:-20;
   /* perfectly outside first card */
 }
 
@@ -5990,3 +6095,49 @@ a.listen-btn:hover i.fa-circle-play {
  /* .seo-banner{
   margin-top: 100px;
  } */
+
+/* .sub-footer{
+  margin-top: 15px;
+} */
+
+/* about page video */
+
+ .high-card2 {
+      position: relative;
+      /* width: 400px;
+      height: 230px; */
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #000;
+    }
+
+    .high-card2 img {
+      /* width: 100%;
+      height: 100%; */
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .high-card2 span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      z-index: 2;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ✅ ensures video fully fills box */
+      display: none;
+    }
