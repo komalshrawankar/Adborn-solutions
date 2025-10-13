@@ -1975,7 +1975,7 @@ span.highlight-2 {
 .meet-1 {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .meet-icon {
@@ -2319,6 +2319,7 @@ width:20px; */
   width: 100%;
   height: 400px;
   position: relative;
+  
   /* overflow-y: visible !important; */
 }
 
@@ -2855,6 +2856,40 @@ width:20px; */
   background-size: cover;
   height: 80vh;
 }
+
+/* Full width single visible card */
+.col-12-single {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Optional visual highlight */
+.blog-card.single-visible {
+  transform: scale(1.03);  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+/* Increase the image height when the card is full width */
+.col-12-single .blog-img-placeholder {
+  height: 400px;      /* new height */
+  transition: height 0.3s ease;
+}
+/* Optional: category active highlight */
+.blog-categories li.active {
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.blog-categories li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
 
 .blog-logo img {
   margin-top: 16px;
@@ -3764,7 +3799,7 @@ width:20px; */
   transition: all 0.3s ease-in-out;
   text-align: center;
   color: black;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 .form-card:hover {
@@ -4288,6 +4323,7 @@ width:20px; */
   text-align: left;
   flex: 1;
   min-width: 260px;
+  overflow: hidden;
 }
 
 .rs-rating {
@@ -4542,6 +4578,7 @@ width:20px; */
   height: 400px;
   border-radius: 20px;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .success-img img {
@@ -4551,6 +4588,7 @@ width:20px; */
   /* maintain aspect ratio */
   display: block;
   /* remove inline gaps */
+  object-fit: cover;
 }
 
 .success-card button {
@@ -6141,3 +6179,204 @@ a.listen-btn:hover i.fa-circle-play {
       object-fit: cover; /* ✅ ensures video fully fills box */
       display: none;
     }
+
+    /* call now button */
+    /* Default hidden */
+.mobile-only,
+.desktop-only {
+  display: none;
+}
+
+/* Show on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Show on desktop */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* success card  */
+
+/* Show on mobile */
+@media (max-width: 768px) {
+  .success-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .success-text {
+    align-items: center !important;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .success-img img {
+    width: 90%;
+    margin: 20px auto 0;
+  }
+}
+
+/* Show on desktop */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+
+/* our subcription */
+
+/* 🔹 Responsive Behaviour */
+@media (max-width: 768px) {
+  .subscription-workflow h1 {
+    font-size: 1.6rem;
+  }
+
+  .meet-1 {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .meet-1 img {
+    width: 80px;
+    margin: 10px 0;
+  }
+
+  .meet-1 h2 {
+    font-size: 2rem;
+  }
+
+  .meet-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .subscription-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscription-workflow h1 {
+    font-size: 1.3rem;
+  }
+
+  .meet-1 h2 {
+    font-size: 1.7rem;
+  }
+
+  .meet-1 img {
+    width: 70px;
+  }
+}
+/* industri hero */
+@media (max-width: 992px) {
+  .indo-shape {
+    margin-top: 30px;
+  }
+
+  .shape-wrapper {
+    flex-direction: column;
+  }
+
+  .shape-big {
+    width: 180px;
+    height: 180px;
+  }
+
+  .shape-small,
+  .shape-small2 {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shape-big {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shape-small,
+  .shape-small2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .shape-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .indo-shape {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .seo-tab{
+    font-size:15px;
+  }
+}
+/* work-footer */
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .work-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .story-btn {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-top:10px;
+    
+  }
+  .fw-bold5{
+    font-size:25px;
+    margin-top: 10px;
+  }
+  .mobile-view {
+    flex-direction:column;
+  }
+  .text-industry{
+    margin-top:10px;
+  }
+  .shape-small{
+    height:150px;
+    width:150px;
+    margin-right:40px;
+  }
+  .shape-small2{
+    height:150px;
+    width:150px;
+  }
+  .growth-seo .button{
+    height:40px;
+    width:30px;
+    border:none;
+  }
+}

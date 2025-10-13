@@ -29,7 +29,7 @@
   <section class="container  industries-hero main-content">
     <div class="row align-items-center">
       <!-- Left Content -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
         <div>
           <h3 class="fw-bold5">
             All Your E-commerce Marketing
@@ -42,16 +42,16 @@
         <p class="mt-3 industry-para">
           Transparent Hourly Billing & Expert Marketing with <br> Adborn Solutions’ All-in-One E-commerce Subscription
         </p>
-        <div class="d-flex align-items-center ">
-          <a href="#" class="btn-industry text-center ecommerce-btn">Unlock Your Demo</a>
+        <div class="d-flex align-items-center mobile-view ">
+          <a href="contactus.html" class="btn-industry text-center ecommerce-btn">Unlock Your Demo</a>
           <span class="text-industry">Creative design, smart development, <br>targeted ads, and more all included in a
             <br> single marketing subscription.</span>
         </div>
       </div>
 
       <!-- Right Shapes -->
-      <div class="col-lg-4 indo-shape">
-        <div class="d-flex justify-content-center align-items-center gap-3">
+      <div class="col-lg-4 col-md-12 indo-shape d-flex justify-content-center">
+        <div class="shape-wrapper d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
           <!-- Big Square -->
           <div class="shape-big col-6"></div>
           <!-- Two Small Stacked -->
@@ -330,8 +330,7 @@
                   <div>
 
                     <h2>Marketing & Creative</h2>
-                    <span class="seo-tab">We create brand - consistent desgins and scroll - stopping creatives that not
-                      only look great - but drive clicks, leads, and results across all channels</span>
+                    <span class="seo-tab">We create brand-consistent designs and scroll-stopping creatives that drive clicks and results across all channels.</span>
                   </div>
                   <img src="./Images/software3.png" alt="">
 
@@ -477,7 +476,16 @@
             <div class="success-text d-flex flex-column text-start align-items-start justify-content-center">
               <div class="fs-1">Meet the Specialists <br>Driving Your Success</div>
               <p>We collaborate only with vetted influencers, ensuring every <br> partnership is strategic, authentic, and performance-driven.</p>
-              <button>Schedule your Call</button>
+              <!-- Mobile Button (opens phone dialer) -->
+<a href="tel:+917488 049 134" class=" mobile-only" style="text-decoration: none;">
+ <button><i class="fa-solid fa-phone"></i> Call Now</button> 
+</a>
+
+<!-- Desktop Button (redirects to contact form or email) -->
+<a href="contact.html" class=" desktop-only" style="text-decoration: none;">
+  <button>Schedule a call</button>
+</a>
+              
             </div>
             <div class="success-img">
               <img src="./Images/Group-36new.png" alt="" srcset="">
@@ -881,6 +889,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script src="./script.js"> </script>
+  
 
 </body>
 

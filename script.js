@@ -50,6 +50,10 @@
     },
       slidesPerView: 3,
       breakpoints: {
+         0: {             // ✅ For mobile screens
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
         640: { slidesPerView: 2, spaceBetween: 20 },
         1024: { slidesPerView: 2, spaceBetween: 20 },
       },
