@@ -1180,11 +1180,14 @@ span.highlight-2 {
 .service-icon {
   width: 100px;
   height: 100px;
-  background: whitesmoke;
+  /* background: whitesmoke; */
   /* change here */
   border-radius: 15px;
   flex-shrink: 0;
+ 
 }
+
+
 
 .service-item h5 {
   font-weight: 600;
@@ -4029,7 +4032,7 @@ width:20px; */
 .seo-col h1 {
   font-weight: 500;
   font-size: 50px;
-  /* margin-top: 200px; */
+  margin-top: 100px;
 }
 
 .seo-col2 h1 {
@@ -5166,13 +5169,13 @@ a.listen-btn:hover i.fa-circle-play {
   border-bottom: none;
 }
 
-.service-icon {
+/* .service-icon {
   width: 100px;
   height: 100px;
   background: whitesmoke;
   border-radius: 15px;
   flex-shrink: 0;
-}
+} */
 
 .service-item h5 {
   font-weight: 600;
@@ -6280,7 +6283,9 @@ a.listen-btn:hover i.fa-circle-play {
   .meet-1 h2 {
     font-size: 1.7rem;
   }
-
+ .meet-1 span{
+  width: 80%;
+ }
   .meet-1 img {
     width: 70px;
   }
@@ -6378,5 +6383,780 @@ a.listen-btn:hover i.fa-circle-play {
     height:40px;
     width:30px;
     border:none;
+  }
+}
+
+/* email-writting responsive */
+@media (max-width: 768px) {
+  .seo-banner {
+    text-align: center;
+  }
+
+  .seo-col {
+    margin-top: 1.5rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .email-para {
+    font-size: 0.95rem;
+  }
+
+  .seo-banner img {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .seo-banner {
+    padding: 2.5rem;
+  }
+  .seo-banner {
+    margin-top: 100px; /* Slightly more space on mobile if navbar is taller */
+    text-align: center;
+  }
+  .seo-banner h1 {
+    font-size: 1.2rem;
+    margin-top:100px;
+  }
+
+  .email-para {
+    font-size: 0.5rem;
+  }
+
+  .seo-banner img {
+    max-height: 350px;
+  }
+}
+/* ===== Responsive Fixes ===== */
+@media (max-width: 768px) {
+  .solution {
+    padding: 1.5rem;
+    text-align: start;
+    width: 320px;
+  }
+
+  .solution-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .solution-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .solution p {
+    font-size: 0.95rem;
+  }
+
+  .solution h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .solution p {
+    font-size: 1rem;
+  }
+
+  .solution h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* campaign type */
+
+
+
+/* ===== Responsive Styles ===== */
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: inline-block;
+    width: 80%;
+    max-width: 350px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .call-btn {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.9rem 0.5rem;
+    border-radius: 60px;
+    border:none;
+    background-color: #007bff;
+    /* box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); */
+    text-decoration:none;
+  }
+
+  .call-btn:hover {
+    background-color: #0056b3;
+  }
+}
+@media (max-width: 768px) {
+  .campaign-types {
+    flex-direction: column;
+    text-align: center;
+      gap: 0.8rem;
+   
+  }
+  
+
+  .campaign-cards {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .campaign-cards div {
+     min-width: 180px;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+   
+    
+  }
+   .campaign-cards .d-flex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .campaign-text h1 {
+    font-size: 1.6rem;
+  }
+  .campaign-cards .d-flex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+   .cp-1,
+  .cp-4 {
+    max-width: 100%;
+  }
+  .campaign-text span {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .campaign-cards div {
+    min-width: 180px;
+    font-size: 1rem;
+  }
+
+  .campaign-text h1 {
+    font-size: 1.8rem;
+  }
+}
+/* gaming responsive */
+/* ====== Responsive Styles ====== */
+
+/* ✅ Tablet View (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .seo-banner {
+    padding: 2.5rem;
+  }
+
+  .seo-high2 {
+    font-size: 2rem;
+  }
+
+  .second-line {
+    font-size: 1.5rem;
+  }
+  .ui-ux img{
+    margin-left:0px;
+  }
+
+  .seo-para {
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    max-height: 300px;
+  }
+}
+
+/* ✅ Mobile View (max 768px) */
+@media (max-width: 768px) {
+  .seo-banner {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .ui-ux img{
+    margin-left:0px;
+  }
+  .seo-high2 {
+    font-size: 1.8rem;
+  }
+
+  .agency {
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .second-line {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .seo-para {
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  .hero-img {
+    max-height: 300px;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .audit-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .game-btn {
+    justify-content: center !important;
+  }
+  .iGameing-brand{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+  }
+   .iGameing-brand h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .iGameing-brand p {
+    font-size: 0.95rem;
+    text-align:start;
+  }
+
+  .iGameing-brand > div {
+    width: 100%;
+  }
+  
+}
+/* ===== Responsive Fixes ===== */
+
+/* ✅ For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .market-heading {
+    flex-direction:row; /* stack text and image */
+    text-align: center;
+    align-items:center;
+    gap: 10px;
+  }
+
+  .market-heading img {
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .market-card {
+    padding: 15px;
+  }
+
+  .market-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .seo-tab {
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ For tablets (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .market-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .market-heading img {
+    width: 110px;
+    align-items: center;
+  }
+}
+
+/* index.html responsive */
+/* 🔹 Responsive Tweaks */
+@media (max-width: 992px) {
+  .hero-text {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .subheading {
+    text-align: center;
+  }
+
+  .banner-arrow {
+    width: 90px;
+  }
+
+  .consaltant-btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-text {
+    /* font-size: 2rem; */
+    margin-top:50px;
+  }
+  .hero-text {
+  /* background-image: url("../Images/banner-lines.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 30px; /* ✅ correct */
+  font-size:1.2rem;
+}
+
+  .subheading {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .banner-arrow {
+    width: 100px;
+    margin-top: 10px;
+  }
+   .consaltant-btn {
+    padding: 10px 20px;
+    overflow: hidden;
+    object-fit:cover;
+    font-size:1.5rem;
+  }
+}
+
+/* unlock section */
+/* 🔹 Responsive Tweaks */
+@media (max-width: 992px) {
+  .custom-card {
+    text-align: center;
+  }
+
+  .user-img {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    padding: 20px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .user-img {
+    width: 150px;
+  }
+  .unlock{
+    margin-left:0px;
+  }
+  .subheading{
+    margin-right:0px;
+  }
+}
+
+/* 🔹 Tablet view (<=992px) */
+@media (max-width: 992px) {
+  .fw-bold1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .fw-bold2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* 🔹 Mobile view (<=576px) */
+@media (max-width: 576px) {
+  .fw-bold1 {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .fw-bold2 {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+/* hide Komal by default */
+.mobile-avatar {
+  display: none;
+}
+
+/* 🔹 Tablet view (<=992px) */
+@media (max-width: 992px) {
+  .avatars {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .avatar {
+    height: 110px;
+    width: 115px;
+    margin-left: 0;
+    z-index: auto;
+    font-size: 0.95rem;
+  }
+}
+
+/* 🔹 Mobile view (<=576px) */
+@media (max-width: 576px) {
+  .avatars {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .avatar {
+    height: 90px;
+    width: 95px;
+    font-size: 0.8rem;
+    padding: 6px;
+    margin-left: 0;
+    line-height: 1.1;
+  }
+
+  /* show Komal on mobile only */
+  .mobile-avatar {
+    display: flex;
+  }
+  
+    /* prevent long surnames from overflowing */
+  .sirname{
+   font-size:5px;
+  }
+  
+}
+/* end to end */
+
+/* ✅ Responsive styling */
+@media (max-width: 992px) {
+  /* Tablet: 2 cards per row */
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .card-custom-body {
+    padding: 20px;
+  }
+
+  .card-title-custom {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Mobile: 1 card per row */
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-custom {
+    margin: 10px 0;
+  }
+
+  .card-title-custom {
+    font-size: 1rem;
+  }
+
+  .text-custom {
+    font-size: 0.9rem;
+  }
+
+  .card-hidden-text {
+    font-size: 0.85rem;
+  }
+  .market-content{
+    display: none;
+  }
+  .form-card{
+    align-items: center;
+  }
+}
+/* top-world -wide brand */
+/* ==== Responsive Styling ==== */
+
+/* Tablet View (≤992px) → 2 cards per row */
+@media (max-width: 992px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .case-card {
+    padding: 20px;
+    min-height: 200px;
+  }
+
+  .case-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile View (≤576px) → 1 card per row */
+@media (max-width: 576px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .top-world {
+    gap: 10px;
+  }
+
+  .case-card {
+    padding: 18px;
+    min-height: auto;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .case-card p {
+    font-size: 0.9rem;
+  }
+
+  .explore-link {
+    font-size: 0.85rem;
+  }
+
+  .btn-class {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+  }
+}
+/* new standard */
+/* ==== Responsive ==== */
+
+/* Tablet: ≤992px */
+@media (max-width: 992px) {
+  .download-section .info-card {
+    padding: 20px;
+  }
+
+  .download-section .info-card h4 {
+    font-size: 1.6rem;
+  }
+
+  .download-section .info-card span {
+    font-size: 0.95rem;
+  }
+
+  .download-section .info-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile: ≤576px */
+@media (max-width: 576px) {
+  .download-section {
+    padding: 40px 10px;
+  }
+
+  .download-section .fs-1 {
+    font-size: 1.5rem; /* heading */
+  }
+
+  .download-section .highlight_new {
+    font-size: 1.5rem;
+  }
+
+  .download-section .info-card {
+    padding: 15px;
+  }
+
+  .download-section .info-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .download-section .info-card span {
+    font-size: 0.85rem;
+  }
+
+  .download-section .info-card p {
+    font-size: 0.8rem;
+  }
+
+  .explore-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+  .new-s{
+    width:90%;
+  }
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet (≤992px) */
+@media (max-width: 992px) {
+  .col-12 h1 {
+    font-size: 2rem;
+  }
+
+  .col-12 blockquote {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+}
+
+/* Mobile (≤576px) */
+@media (max-width: 576px) {
+  .col-12 h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+    line-height: 1.3;
+  }
+
+  .col-12 blockquote {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+ 
+  .container h2{
+    font-size:20px;
+  }
+  .choose-w{
+    font-size:20px;
+  }
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet (≤992px) → 3 columns */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .team-box {
+    height: 90px;
+  }
+
+  .team-number {
+    font-size: 1.6rem;
+  }
+
+  .team-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (≤576px) → 1-2 columns */
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .team-box {
+    height: 80px;
+  }
+
+  .team-number {
+    font-size: 1.4rem;
+  }
+
+  .team-text {
+    font-size: 0.8rem;
+  }
+  
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet (≤992px) */
+@media (max-width: 992px) {
+  .d-flex.align-items-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-industry {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .text-industry {
+    font-size: 0.9rem;
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+/* Mobile (≤576px) */
+@media (max-width: 576px) {
+  .d-flex.align-items-center {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-industry {
+    padding: 8px 8px;
+    font-size: 1.2rem;
+    width:200px;
+  }
+
+  .text-industry {
+    font-size: 0.85rem;
+    max-width: 80%;
+    text-align: center;
+    word-break: break-word;
+  }
+  .call2{
+    background-color:white;
+  }
+  .success-img{
+    display:none;
   }
 }
