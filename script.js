@@ -87,14 +87,23 @@
     const partnerSwiper = new Swiper(".partner-swiper", {
       slidesPerView: 5,
       spaceBetween: 30,
+      loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+      
+
       navigation: {
         nextEl: ".partner-next",
       prevEl: ".partner-prev",
       },
       breakpoints: {
+        1200: { slidesPerView: 5, spaceBetween: 30 },
         992: { slidesPerView: 5 },
         768: { slidesPerView: 3 },
         576: { slidesPerView: 2 },
+        0: { slidesPerView: 2, spaceBetween: 10 },
       },
     });
   }

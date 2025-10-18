@@ -39,7 +39,7 @@
           <p class="seo-high">SEO Subcriptions</p>
           That Scale With You
         </h1>
-        <h4>With one simple <a href="">Subscription</a></h4>
+        <h4>With one simple <a href="plans.html">Subscription</a></h4>
         <p class="seo-para"> From startups to global enterprises, our flexible plans grow alongside your business.</p>
       </div>
 
@@ -63,11 +63,19 @@
       </div>
 
       <div class="col-12 d-flex align-items-center request-call mt-5 mb-5">
-        <button>Request Your Free Audit</button>
-        <div class="req-span"> Start with exactly what you need today  expand <br>effortlessly as your goals evolve.
+        <!-- Mobile Button (opens phone dialer) -->
+              <a href="tel:+917488 049 134" class=" mobile-only call-btn call2" style="text-decoration: none;">
+                <button class="call-btn call2"><i class="fa-solid fa-phone"></i> Call Now</button>
+              </a>
+          <a href="contactus.html">
+               <button class="desktop-only ps-3">Request Your Free Audit</button>
+          </a>
+    
+        <div class="req-span ms-3"> Start with exactly what you need today  expand <br>effortlessly as your goals evolve.
           Upgrade <br> anytime, cancel risk-free.</div>
       </div>
     </div>
+
   </section>
 
   <!-- slider section -->
@@ -279,8 +287,8 @@
     <div class="row">
 
       <div class="col-12">
-        <h1 class=" w-50 m-auto text-center fs-1">Every SEO Service You Could Wish for
-— All Under One Roof</h1>
+        <h1 class=" m-auto text-center fs-1">Every SEO Service You Could Wish for <br>
+ All Under One Roof</h1>
        
 
       </div>
@@ -392,7 +400,10 @@
           <h2>SEO Specialists Aligned to Your Growth</h2>
           <p>A full roster of SEO experts, strategically allocated for maximum impact, included in a transparent monthly
             plan — engineered to drive measurable growth without the overhead of in-house hiring.</p>
-          <button>Get free consultancy</button>
+            <a href="contactus.html">
+            <button>Get free consultancy</button>
+            </a>
+          
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <img src="./Images/seo-img1.png" alt="" class="w-75">
@@ -546,75 +557,26 @@ Our strategies are designed to deliver tangible, long-term success. Here’s a g
 
 
 <!-- our works  -->
-  <section class="container-fluid works-section">
-
-    <h2 class="works-title pt-5 fs-1">Our Works</h2>
-
-
-    <div class="filter-tags ">
-      <button class="tag-btn active">All Cases</button>
-      <button class="tag-btn g-5">B2B</button>
-      <button class="tag-btn">B2C</button>
-      <button class="tag-btn">E-commerce</button>
-      <button class="tag-btn">Fintech</button>
-      <button class="tag-btn">Gaming</button>
-      <button class="tag-btn">Healthcare</button>
-      <button class="tag-btn">iGaming </button>
-      <button class="tag-btn">IT & Software</button>
-      <button class="tag-btn">Real estate</button>
-      <button class="tag-btn">SaaS</button>
-      <button class="tag-btn">Web3</button>
-    </div>
-
-
-    <div class="work-card mt-3">
-      <div class="work-media"></div>
-      <div class="work-stats">
-        <div class="stat-box">
-          <div class="stat-value">517507</div>
-          <div class="stat-label">Views</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">7701</div>
-          <div class="stat-label">Likes</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">2530</div>
-          <div class="stat-label">Reposts</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value">2343</div>
-          <div class="stat-label">Comments</div>
-        </div>
-        <button class="work-btn">Read more</button>
-      </div>
-    </div>
-
-
-    <div class="work-footer mt-4">
-      <button class="story-btn">See More Success Stories</button>
-      <button class="nav-arrow">&lt;</button>
-      <button class="nav-arrow">&gt;</button>
-    </div>
-  </section>
+ <div id="ourwork"></div>
 
   <div id="rating"></div>
 
 
   <!-- drive section  -->
-  <section class="container drive-section my-5">
+   <section class="container drive-section my-5">
     <div class="row">
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-4 drive-seo">
         <h3>Drive Exceptional Growth in 2025 with Your Strategic Marketing Blueprint</h3>
-           <form action="" class="d-flex align-items-center gap-3 mt-3">
-              <!-- Email Input -->
-              <input type="email" placeholder="Email"
-                class="form-control bg-transparent border-0 border-bottom text-white rounded-0 shadow-none" required>
-              <!-- Button -->
-              <button type="submit" class="btn btn-light rounded-pill  fw-semibold software-btn2">
-                DOWNLOAD FOR FREE
-              </button>
-            </form>
+         <form action="" class="d-flex align-items-center gap-3 mt-3">
+                            <!-- Email Input -->
+                            <input type="email" placeholder="Email"
+                                class="form-control bg-transparent border-0 border-bottom text-white rounded-0 shadow-none"
+                                required>
+                            <!-- Button -->
+                            <button type="submit" class="btn btn-light rounded-pill px-4 ignite-btn">
+                                DOWNLOAD FOR FREE
+                            </button>
+                        </form>
       </div>
 
       <div class="col-12 col-md-6">
@@ -908,11 +870,11 @@ Enterprise SEO is tailored for large websites with complex structures.
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script src="./script.js"></script>
 
   
-<script>
+<!-- <script>
         const swiper = new Swiper('.review-slider', {
             loop: true,
             speed: 600,
@@ -945,7 +907,7 @@ Enterprise SEO is tailored for large websites with complex structures.
                 }
             }
         });
-    </script>
+    </script> -->
 
 
 </body>
