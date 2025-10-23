@@ -163,18 +163,18 @@ loadHTML("carousel.html", "carousel", initPartnerSwiper);
 
 function initOurWork() {
   const workData = [
-    { category: "all", title: "B2B Project 1", desc: "B2B project example 1", img: "https://picsum.photos/400/200?random=1", views: "517507", likes: "7701", reposts: "2530", comments: "2343" },
-    { category: "B2B", title: "B2B Project 2", desc: "B2B project example 2", img: "https://picsum.photos/400/200?random=6", views: "431200", likes: "6700", reposts: "1900", comments: "1600" },
-    { category: "B2C", title: "B2C Project 1", desc: "B2C project example", img: "https://picsum.photos/400/200?random=2", views: "420891", likes: "6890", reposts: "2230", comments: "2104" },
-    { category: "E-commerce", title: "E-commerce Project 1", desc: "E-commerce project", img: "https://picsum.photos/400/200?random=3", views: "398123", likes: "6405", reposts: "1921", comments: "1750" },
-    { category: "Fintech", title: "Fintech Project 1", desc: "Fintech project", img: "https://picsum.photos/400/200?random=4", views: "512000", likes: "7021", reposts: "2100", comments: "1850" },
-    { category: "Gaming", title: "Gaming Project 1", desc: "Gaming project", img: "https://picsum.photos/400/200?random=5", views: "609000", likes: "8900", reposts: "3200", comments: "2500" },
-    { category: "Healthcare", title: "Healthcare Project 1", desc: "Healthcare project", img: "https://picsum.photos/400/200?random=7", views: "350000", likes: "6000", reposts: "1800", comments: "1500" },
-    { category: "iGaming", title: "iGaming Project 1", desc: "iGaming project", img: "https://picsum.photos/400/200?random=8", views: "290000", likes: "4500", reposts: "1200", comments: "1100" },
-    { category: "IT & Software", title: "IT Project 1", desc: "IT & Software project", img: "https://picsum.photos/400/200?random=9", views: "410000", likes: "6800", reposts: "2000", comments: "1700" },
-    { category: "Real estate", title: "Real Estate Project 1", desc: "Real estate project", img: "https://picsum.photos/400/200?random=10", views: "560000", likes: "7500", reposts: "2400", comments: "2000" },
-    { category: "SaaS", title: "SaaS Project 1", desc: "SaaS project", img: "https://picsum.photos/400/200?random=11", views: "470000", likes: "7100", reposts: "2100", comments: "1800" },
-    { category: "Web3", title: "Web3 Project 1", desc: "Web3 project", img: "https://picsum.photos/400/200?random=12", views: "300000", likes: "5000", reposts: "1500", comments: "1300" },
+    { category: "all", title: "All-cases", desc: " project example 1", img: "Images/wsocial.jpg", views: "517507", likes: "7701", reposts: "2530", comments: "2343" },
+    { category: "B2B", title: "B2B Project 2", desc: "B2B project example 2", img: "Images/wb2b.jpg", views: "431200", likes: "6700", reposts: "1900", comments: "1600" },
+    { category: "video-edit", title: "Video Editing Project 1", desc: "video-edit project example", img: "Images/wvideo.jpg", views: "420891", likes: "6890", reposts: "2230", comments: "2104" },
+    { category: "E-commerce", title: "E-commerce Project 1", desc: "E-commerce project", img: "Images/wecommerce.jpg", views: "398123", likes: "6405", reposts: "1921", comments: "1750" },
+    { category: "appdev", title: "Appdev Project 1", desc: "appdev project", img: "Images/wappdev.jpg", views: "512000", likes: "7021", reposts: "2100", comments: "1850" },
+    { category: "Gaming", title: "Gaming Project 1", desc: "Gaming project", img: "Images/wgaming.jpg", views: "609000", likes: "8900", reposts: "3200", comments: "2500" },
+    { category: "email", title: "Email Project 1", desc: "email project", img: "Images/wemail.jpg", views: "350000", likes: "6000", reposts: "1800", comments: "1500" },
+    { category: "iGaming", title: "iGaming Project 1", desc: "iGaming project", img: "Images/wgaming.jpg", views: "290000", likes: "4500", reposts: "1200", comments: "1100" },
+    { category: "IT & Software", title: "IT Project 1", desc: "IT & Software project", img: "Images/wsoftware.jpg", views: "410000", likes: "6800", reposts: "2000", comments: "1700" },
+    { category: "podcast", title: "podcast Project 1", desc: "podcast project", img: "Images/wpodcast.jpg", views: "560000", likes: "7500", reposts: "2400", comments: "2000" },
+    { category: "seo", title: "Seo Project 1", desc: "seo project", img: "Images/wseo.jpg", views: "470000", likes: "7100", reposts: "2100", comments: "1800" },
+    { category: "uiux", title: "Ui-Ux Project 1", desc: "ui-ux project", img:"Images/wuiux.jpg", views: "300000", likes: "5000", reposts: "1500", comments: "1300" },
   ];
 
   let currentIndex = 0;

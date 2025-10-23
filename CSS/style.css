@@ -101,9 +101,43 @@ body {
 
 
         @media (max-width: 992px) {
-            .dropdown-menu.mega-menu {
-                width: 100%;
-            }
+           .navbar {
+    position: relative;
+     border-radius: 30px;
+    width: 90%;
+    left: 20px;
+    transform: none;
+    border-radius: 0;
+    top:0;
+    margin-top:20px;
+    border-radius:30px;
+  }
+
+  .dropdown-menu.mega-menu {
+    position: static !important; /* Let it flow inside collapsible menu */
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+  }
+
+  .mega-menu .row {
+    flex-direction: column;
+  }
+
+  .mega-menu .col-md-6,
+  .mega-menu .col-md-3 {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  /* Hide the double toggle arrows on mobile */
+  .nav-item.dropdown.d-flex > .dropdown-toggle {
+    display: inline-block !important;
+  }
         }
         
 .btn-gradient-demo {
@@ -6496,7 +6530,7 @@ a.listen-btn:hover i.fa-circle-play {
   .call-btn {
     width: 80%;
     font-size: 1rem;
-    padding: 0.9rem 0.5rem;
+    padding: 10px 10px;
     border-radius: 60px;
     border:none;
     background-color: #007bff;
@@ -7995,4 +8029,10 @@ section */
   .team-number {
     font-size: 1.5rem;
   }
+  .web-head{
+   font-size:18px;
+  }
+   .web-para{
+    font-size:12px;
+   }
 }
