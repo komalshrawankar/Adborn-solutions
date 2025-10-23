@@ -4350,17 +4350,26 @@ width:20px; */
   background: #444;
   border-radius: 12px;
   flex-shrink: 0;
+  
 }
+
 
 .rs-review-box {
   background: #111;
   height: 300px;
-  padding: 20px;
+  padding: 40px;
   border-radius: 12px;
   text-align: left;
   flex: 1;
   min-width: 260px;
   overflow: hidden;
+}
+.rs-image-box img {
+  width:auto;
+  height: 100%;
+  object-fit:cover; /* fills without stretching */
+  border-radius: 12px;
+  max-width:100%; /* optional, match review box corners */
 }
 
 .rs-rating {
