@@ -116,16 +116,26 @@
     <div class="row">
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-4 drive-seo">
         <h3>Ignite Rapid B2B Growth in <br>2025 with Your Strategic <br> Marketing Plan</h3>
-         <form action="" class="d-flex align-items-center gap-3 mt-3">
-                            <!-- Email Input -->
-                            <input type="email" placeholder="Email"
-                                class="form-control bg-transparent border-0 border-bottom text-white rounded-0 shadow-none"
-                                required>
-                            <!-- Button -->
-                            <button type="submit" class="btn btn-light rounded-pill px-4 ignite-btn">
-                                DOWNLOAD FOR FREE
-                            </button>
-                        </form>
+        <form
+  id="subscribeForm"
+  class="d-flex align-items-center mt-3 unlock-p flex-column flex-sm-row gap-2"
+>
+  <input
+    type="email"
+    id="emailInput"
+    class="form-control mb-3 flex-grow-1"
+    placeholder="Enter Your Email"
+    required
+  />
+  <button
+    type="submit"
+    id="downloadBtn"
+    class="btn btn-download mb-1 ms-3"
+  >
+    DOWNLOAD 
+  </button>
+  <p id="responseMsg" class="mt-2 text-center w-100" style="font-size: 14px;"></p>
+</form>
       </div>
 
       <div class="col-12 col-md-6">

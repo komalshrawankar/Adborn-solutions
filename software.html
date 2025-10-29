@@ -135,15 +135,33 @@
           </div>
           <!-- Right Image -->
           <div>
-            <form action="" class="d-flex align-items-center gap-3 ">
-              <!-- Email Input -->
-              <input type="email" placeholder="Email"
-                class="form-control bg-transparent border-0 border-bottom text-white rounded-0 shadow-none mt-3" required/>
-              <!-- Button -->
-              <button type="submit" class="btn btn-light rounded-pill  fw-semibold software-btn1">
-                DOWNLOAD FOR FREE
-              </button>
-            </form>
+            <form
+  id="subscribeForm"
+  action=""
+  class="d-flex align-items-center gap-3 flex-column flex-sm-row mt-3 unlock-p"
+>
+  <!-- Email Input -->
+  <input
+    type="email"
+    id="emailInput"
+    placeholder="Email"
+    class="form-control bg-transparent border-0 border-bottom text-white rounded-0 shadow-none mt-3 mb-5 flex-grow-1"
+    required
+  />
+
+  <!-- Button -->
+  <button
+    type="submit"
+    id="downloadBtn"
+    class="btn btn-light rounded-pill fw-semibold software-btn1 mb-5 ms-3 btn-download"
+  >
+    DOWNLOAD FOR FREE
+  </button>
+
+  <!-- Response Message -->
+  <p id="responseMsg" class="mt-2 text-center w-100" style="font-size: 14px;"></p>
+</form>
+
           </div>
         </div>
 

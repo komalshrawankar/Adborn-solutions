@@ -1,9 +1,9 @@
- console.log("Script loaded and running");
+console.log("Script loaded and running");
 /// Wait until DOM is fully loaded
 //document.addEventListener("DOMContentLoaded", () => {
-  // ===============================
-  // 1. Custom Horizontal Slider
-  // ===============================
+// ===============================
+// 1. Custom Horizontal Slider
+// ===============================
 //   const slider = document.getElementById("slider");
 //   if (slider) {
 //     let currentIndex = 0;
@@ -28,107 +28,106 @@
 //     });
 //   }
 // });
-  // ===============================
-  // 2. Swipers
-  // ===============================
+// ===============================
+// 2. Swipers
+// ===============================
 
-  // Home page Swiper (autoplay, pagination only)
-  if (document.querySelector(".home-swiper")) {
-    const homeSwiper = new Swiper(".home-swiper", {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".home-swiper .swiper-pagination",
-        clickable: true,
-      },
-        navigation: {
+// Home page Swiper (autoplay, pagination only)
+if (document.querySelector(".home-swiper")) {
+  const homeSwiper = new Swiper(".home-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".home-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
       nextEl: ".custom-next",
       prevEl: ".custom-prev",
     },
-      slidesPerView: 3,
-      breakpoints: {
-         0: {             // ✅ For mobile screens
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        // ✅ For mobile screens
         slidesPerView: 1,
         spaceBetween: 10,
       },
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 2, spaceBetween: 20 },
-      },
-    });
-  }
+      640: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 2, spaceBetween: 20 },
+    },
+  });
+}
 
+// About page Swiper (manual nav, no autoplay)
+if (document.querySelector(".about-swiper")) {
+  const aboutSwiper = new Swiper(".about-swiper", {
+    loop: true,
+    pagination: {
+      el: ".about-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".about-swiper .custom-next",
+      prevEl: ".about-swiper .custom-prev",
+    },
+    slidesPerView: 4.5,
+    spaceBetween: 20,
+    breakpoints: {
+      640: { slidesPerView: 2.5, spaceBetween: 15 },
+      1024: { slidesPerView: 4.5, spaceBetween: 20 },
+    },
+  });
+}
 
-  // About page Swiper (manual nav, no autoplay)
-  if (document.querySelector(".about-swiper")) {
-    const aboutSwiper = new Swiper(".about-swiper", {
-      loop: true,
-      pagination: {
-        el: ".about-swiper .swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".about-swiper .custom-next",
-        prevEl: ".about-swiper .custom-prev",
-      },
-      slidesPerView: 4.5,
-      spaceBetween: 20,
-      breakpoints: {
-        640: { slidesPerView: 2.5, spaceBetween: 15 },
-        1024: { slidesPerView: 4.5, spaceBetween: 20 },
-      },
-    });
-  }
-
-  // Partner logos Swiper
-  if (document.querySelector(".partner-swiper")) {
-    const partnerSwiper = new Swiper(".partner-swiper", {
-      slidesPerView: 5,
-      spaceBetween: 30,
-      loop: true,
+// Partner logos Swiper
+if (document.querySelector(".partner-swiper")) {
+  const partnerSwiper = new Swiper(".partner-swiper", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
     },
-      
 
-      navigation: {
-        nextEl: ".partner-next",
+    navigation: {
+      nextEl: ".partner-next",
       prevEl: ".partner-prev",
-      },
-      breakpoints: {
-        1200: { slidesPerView: 5, spaceBetween: 30 },
-        992: { slidesPerView: 5 },
-        768: { slidesPerView: 3 },
-        576: { slidesPerView: 2 },
-        0: { slidesPerView: 2, spaceBetween: 10 },
-      },
-    });
-  }
+    },
+    breakpoints: {
+      1200: { slidesPerView: 5, spaceBetween: 30 },
+      992: { slidesPerView: 5 },
+      768: { slidesPerView: 3 },
+      576: { slidesPerView: 2 },
+      0: { slidesPerView: 2, spaceBetween: 10 },
+    },
+  });
+}
 
-  // Testimonial Swiper
-  if (document.querySelector(".testimonial-swiper")) {
-    const testimonialSwiper = new Swiper(".testimonial-swiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: ".testimonial-swiper .swiper-button-next",
-        prevEl: ".testimonial-swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        992: { slidesPerView: 3 },
-        768: { slidesPerView: 2 },
-        576: { slidesPerView: 1 },
-      },
-    });
-  }
+// Testimonial Swiper
+if (document.querySelector(".testimonial-swiper")) {
+  const testimonialSwiper = new Swiper(".testimonial-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".testimonial-swiper .swiper-button-next",
+      prevEl: ".testimonial-swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      992: { slidesPerView: 3 },
+      768: { slidesPerView: 2 },
+      576: { slidesPerView: 1 },
+    },
+  });
+}
 
-  // ===============================
-  // 3. Load Header & Footer
-  // ===============================
- function loadHTML(file, elementId, callback) {
+// ===============================
+// 3. Load Header & Footer
+// ===============================
+function loadHTML(file, elementId, callback) {
   fetch(file)
     .then((response) => response.text())
     .then((data) => {
@@ -157,24 +156,130 @@ loadHTML("rating.html", "rating", initSwiper);
 // ✅ Load carousel + initialize Swiper only after injection
 loadHTML("carousel.html", "carousel", initPartnerSwiper);
 
-
-
 // !-- OUR WORKS SLIDER SECTION --
 
 function initOurWork() {
   const workData = [
-    { category: "all", title: "All-cases", desc: " project example 1", img: "Images/wsocial.jpg", views: "517507", likes: "7701", reposts: "2530", comments: "2343" },
-    { category: "B2B", title: "B2B Project 2", desc: "B2B project example 2", img: "Images/wb2b.jpg", views: "431200", likes: "6700", reposts: "1900", comments: "1600" },
-    { category: "video-edit", title: "Video Editing Project 1", desc: "video-edit project example", img: "Images/wvideo.jpg", views: "420891", likes: "6890", reposts: "2230", comments: "2104" },
-    { category: "E-commerce", title: "E-commerce Project 1", desc: "E-commerce project", img: "Images/wecommerce.jpg", views: "398123", likes: "6405", reposts: "1921", comments: "1750" },
-    { category: "appdev", title: "Appdev Project 1", desc: "appdev project", img: "Images/wappdev.jpg", views: "512000", likes: "7021", reposts: "2100", comments: "1850" },
-    { category: "Gaming", title: "Gaming Project 1", desc: "Gaming project", img: "Images/wgaming.jpg", views: "609000", likes: "8900", reposts: "3200", comments: "2500" },
-    { category: "email", title: "Email Project 1", desc: "email project", img: "Images/wemail.jpg", views: "350000", likes: "6000", reposts: "1800", comments: "1500" },
-    { category: "iGaming", title: "iGaming Project 1", desc: "iGaming project", img: "Images/wgaming.jpg", views: "290000", likes: "4500", reposts: "1200", comments: "1100" },
-    { category: "IT & Software", title: "IT Project 1", desc: "IT & Software project", img: "Images/wsoftware.jpg", views: "410000", likes: "6800", reposts: "2000", comments: "1700" },
-    { category: "podcast", title: "podcast Project 1", desc: "podcast project", img: "Images/wpodcast.jpg", views: "560000", likes: "7500", reposts: "2400", comments: "2000" },
-    { category: "seo", title: "Seo Project 1", desc: "seo project", img: "Images/wseo.jpg", views: "470000", likes: "7100", reposts: "2100", comments: "1800" },
-    { category: "uiux", title: "Ui-Ux Project 1", desc: "ui-ux project", img:"Images/wuiux.jpg", views: "300000", likes: "5000", reposts: "1500", comments: "1300" },
+    {
+      category: "all",
+      title: "All-cases",
+      desc: " project example 1",
+      img: "Images/wsocial.jpg",
+      views: "517507",
+      likes: "7701",
+      reposts: "2530",
+      comments: "2343",
+    },
+    {
+      category: "B2B",
+      title: "B2B Project 2",
+      desc: "B2B project example 2",
+      img: "Images/wb2b.jpg",
+      views: "431200",
+      likes: "6700",
+      reposts: "1900",
+      comments: "1600",
+    },
+    {
+      category: "video-edit",
+      title: "Video Editing Project 1",
+      desc: "video-edit project example",
+      img: "Images/wvideo.jpg",
+      views: "420891",
+      likes: "6890",
+      reposts: "2230",
+      comments: "2104",
+    },
+    {
+      category: "E-commerce",
+      title: "E-commerce Project 1",
+      desc: "E-commerce project",
+      img: "Images/wecommerce.jpg",
+      views: "398123",
+      likes: "6405",
+      reposts: "1921",
+      comments: "1750",
+    },
+    {
+      category: "appdev",
+      title: "Appdev Project 1",
+      desc: "appdev project",
+      img: "Images/wappdev.jpg",
+      views: "512000",
+      likes: "7021",
+      reposts: "2100",
+      comments: "1850",
+    },
+    {
+      category: "Gaming",
+      title: "Gaming Project 1",
+      desc: "Gaming project",
+      img: "Images/wgaming.jpg",
+      views: "609000",
+      likes: "8900",
+      reposts: "3200",
+      comments: "2500",
+    },
+    {
+      category: "email",
+      title: "Email Project 1",
+      desc: "email project",
+      img: "Images/wemail.jpg",
+      views: "350000",
+      likes: "6000",
+      reposts: "1800",
+      comments: "1500",
+    },
+    {
+      category: "iGaming",
+      title: "iGaming Project 1",
+      desc: "iGaming project",
+      img: "Images/wgaming.jpg",
+      views: "290000",
+      likes: "4500",
+      reposts: "1200",
+      comments: "1100",
+    },
+    {
+      category: "IT & Software",
+      title: "IT Project 1",
+      desc: "IT & Software project",
+      img: "Images/wsoftware.jpg",
+      views: "410000",
+      likes: "6800",
+      reposts: "2000",
+      comments: "1700",
+    },
+    {
+      category: "podcast",
+      title: "podcast Project 1",
+      desc: "podcast project",
+      img: "Images/wpodcast.jpg",
+      views: "560000",
+      likes: "7500",
+      reposts: "2400",
+      comments: "2000",
+    },
+    {
+      category: "seo",
+      title: "Seo Project 1",
+      desc: "seo project",
+      img: "Images/wseo.jpg",
+      views: "470000",
+      likes: "7100",
+      reposts: "2100",
+      comments: "1800",
+    },
+    {
+      category: "uiux",
+      title: "Ui-Ux Project 1",
+      desc: "ui-ux project",
+      img: "Images/wuiux.jpg",
+      views: "300000",
+      likes: "5000",
+      reposts: "1500",
+      comments: "1300",
+    },
   ];
 
   let currentIndex = 0;
@@ -186,7 +291,7 @@ function initOurWork() {
   function renderSlides(data) {
     if (!sliderInner) return;
     sliderInner.innerHTML = "";
-    data.forEach(item => {
+    data.forEach((item) => {
       const slide = document.createElement("div");
       slide.classList.add("work-slide");
       slide.innerHTML = `
@@ -219,19 +324,23 @@ function initOurWork() {
       updateSlider();
     });
     prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + filteredData.length) % filteredData.length;
+      currentIndex =
+        (currentIndex - 1 + filteredData.length) % filteredData.length;
       updateSlider();
     });
   }
 
   const filterButtons = document.querySelectorAll(".tag-btn");
   if (filterButtons.length > 0) {
-    filterButtons.forEach(btn => {
+    filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
+        filterButtons.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
         const category = btn.dataset.category;
-        filteredData = category === "all" ? [...workData] : workData.filter(w => w.category === category);
+        filteredData =
+          category === "all"
+            ? [...workData]
+            : workData.filter((w) => w.category === category);
         currentIndex = 0;
         renderSlides(filteredData);
       });
@@ -241,17 +350,25 @@ function initOurWork() {
   // Touch swipe support
   let startX = 0;
   if (sliderInner) {
-    sliderInner.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
-    sliderInner.addEventListener("touchend", e => {
+    sliderInner.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+    sliderInner.addEventListener("touchend", (e) => {
       let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) { currentIndex = (currentIndex + 1) % filteredData.length; updateSlider(); }
-      if (endX - startX > 50) { currentIndex = (currentIndex - 1 + filteredData.length) % filteredData.length; updateSlider(); }
+      if (startX - endX > 50) {
+        currentIndex = (currentIndex + 1) % filteredData.length;
+        updateSlider();
+      }
+      if (endX - startX > 50) {
+        currentIndex =
+          (currentIndex - 1 + filteredData.length) % filteredData.length;
+        updateSlider();
+      }
     });
   }
 
   renderSlides(filteredData);
 }
-
 
 function initPartnerSwiper() {
   console.log("Carousel HTML injected!");
@@ -280,15 +397,15 @@ function initPartnerSwiper() {
         },
       });
       console.log("Partner Swiper initialized ✅");
-    } 
+    }
   }, 50); // 50ms delay ensures DOM is painted
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector('.carousel');
+  const carousel = document.querySelector(".carousel");
   if (!carousel) return; // ✅ stop if no carousel on page
 
-  const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll(".item");
   const itemCount = items.length;
   const angle = 360 / itemCount;
 
@@ -305,11 +422,11 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item, i) => {
       const itemAngle = (i * angle + rotation) % 360;
       if (itemAngle > 90 && itemAngle < 270) {
-        item.style.filter = 'blur(3px)';
-        item.style.opacity = '0.4';
+        item.style.filter = "blur(3px)";
+        item.style.opacity = "0.4";
       } else {
-        item.style.filter = 'blur(0)';
-        item.style.opacity = '1';
+        item.style.filter = "blur(0)";
+        item.style.opacity = "1";
       }
     });
 
@@ -323,8 +440,8 @@ document.addEventListener("DOMContentLoaded", () => {
 if (document.querySelector(".seo-final")) {
   const seoSwiper = new Swiper(".seo-final", {
     loop: true,
-    slidesPerView: 4,        // four cards visible at once
-    spaceBetween: 20,        // gap between slides
+    slidesPerView: 4, // four cards visible at once
+    spaceBetween: 20, // gap between slides
     navigation: {
       nextEl: ".seo-next",
       prevEl: ".seo-prev",
@@ -337,8 +454,6 @@ if (document.querySelector(".seo-final")) {
     },
   });
 }
-
-
 
 // review slider
 // ===============================
@@ -371,10 +486,7 @@ function initSwiper() {
       992: { slidesPerView: 1, spaceBetween: 50 },
     },
   });
-
- 
 }
-
 
 // b2b read more
 // document.addEventListener("DOMContentLoaded", () => {
@@ -410,8 +522,6 @@ function initSwiper() {
 //   });
 // }
 
-
-
 // document.addEventListener("DOMContentLoaded", () => {
 //   const exploreBtn = document.getElementById("exploreBtn");
 //   const extraCards = document.querySelectorAll(".extra-team"); // selects col-md-4 wrapper
@@ -427,11 +537,6 @@ function initSwiper() {
 //   });
 // });
 
-
-
-
-
-
 // ===============================
 // Book A Call Form Submission
 // ===============================
@@ -441,9 +546,11 @@ function initBookForm() {
 
   if (!form) return;
 
-  const API_BASE = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
-    ? "http://localhost:5000"
-    : "https://your-production-backend.com";
+  const API_BASE =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+      ? "http://localhost:5000"
+      : "https://your-production-backend.com";
 
   // feedback element
   let feedback = document.createElement("p");
@@ -489,10 +596,12 @@ function initBookForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        feedback.textContent = data.message || "Failed to send. Please try again.";
+        feedback.textContent =
+          data.message || "Failed to send. Please try again.";
         feedback.style.color = "red";
       } else {
-        feedback.textContent = data.message || "Thank you! We'll get back to you soon.";
+        feedback.textContent =
+          data.message || "Thank you! We'll get back to you soon.";
         feedback.style.color = "green";
         form.reset();
       }
@@ -520,7 +629,6 @@ function initBookForm() {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ script.js loaded successfully");
 
@@ -531,7 +639,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (readMoreBtn) {
     readMoreBtn.addEventListener("click", () => {
-      extraCards.forEach(card => {
+      extraCards.forEach((card) => {
         card.style.display = expanded ? "none" : "block";
       });
       readMoreBtn.textContent = expanded ? "Read more" : "Show less";
@@ -545,7 +653,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showMoreBtn.addEventListener("click", (e) => {
       e.preventDefault();
       const hiddenJobs = document.querySelectorAll(".hidden-job");
-      hiddenJobs.forEach(job => job.style.display = "block");
+      hiddenJobs.forEach((job) => (job.style.display = "block"));
       showMoreBtn.style.display = "none";
     });
   }
@@ -556,7 +664,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnVacancies) {
     btnVacancies.addEventListener("click", (e) => {
       e.preventDefault();
-      extraJobs.forEach(job => job.style.display = "block");
+      extraJobs.forEach((job) => (job.style.display = "block"));
       btnVacancies.style.display = "none";
     });
   }
@@ -593,26 +701,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- // 5️⃣ Explore Team Section
+  // 5️⃣ Explore Team Section
   const exploreBtn = document.getElementById("exploreBtn");
   const extraTeamCards = document.querySelectorAll(".extra-team");
   let expandedExplore = false;
 
   if (exploreBtn) {
     exploreBtn.addEventListener("click", () => {
-      extraTeamCards.forEach(col => {
+      extraTeamCards.forEach((col) => {
         col.style.display = expandedExplore ? "none" : "flex";
       });
       exploreBtn.textContent = expandedExplore ? "Explore Team" : "Show Less";
       expandedExplore = !expandedExplore;
     });
   }
-   // 6️⃣ Index Explore Section
+  // 6️⃣ Index Explore Section
   const indexExploreBtn = document.getElementById("indexexplore-btn");
   if (indexExploreBtn) {
     indexExploreBtn.addEventListener("click", function () {
       const hiddenCards = document.getElementById("hidden-team");
-      if (hiddenCards.style.display === "none" || hiddenCards.style.display === "") {
+      if (
+        hiddenCards.style.display === "none" ||
+        hiddenCards.style.display === ""
+      ) {
         hiddenCards.style.display = "flex";
         hiddenCards.style.flexWrap = "wrap";
         this.textContent = "Show Less";
@@ -622,39 +733,108 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-// 7️⃣ AdBorn Experience Slider (Unique)
-const expTrack = document.querySelector("#adbornExpSlider .exp-slide-track");
-const expSlides = document.querySelectorAll("#adbornExpSlider .exp-slide-card");
-const expPrev = document.getElementById("expPrev");
-const expNext = document.getElementById("expNext");
+  // 7️⃣ AdBorn Experience Slider (Unique)
+  const expTrack = document.querySelector("#adbornExpSlider .exp-slide-track");
+  const expSlides = document.querySelectorAll(
+    "#adbornExpSlider .exp-slide-card"
+  );
+  const expPrev = document.getElementById("expPrev");
+  const expNext = document.getElementById("expNext");
 
-let expIndex = 0;
+  let expIndex = 0;
 
-// ✅ Run only if the slider exists on this page
-if (expTrack && expSlides.length > 0) {
-  function showExpSlide(index) {
-    expTrack.style.transform = `translateX(-${index * 100}%)`;
+  // ✅ Run only if the slider exists on this page
+  if (expTrack && expSlides.length > 0) {
+    function showExpSlide(index) {
+      expTrack.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    expNext?.addEventListener("click", () => {
+      expIndex = (expIndex + 1) % expSlides.length;
+      showExpSlide(expIndex);
+    });
+
+    expPrev?.addEventListener("click", () => {
+      expIndex = (expIndex - 1 + expSlides.length) % expSlides.length;
+      showExpSlide(expIndex);
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      expIndex = (expIndex + 1) % expSlides.length;
+      showExpSlide(expIndex);
+    }, 5000);
   }
+  // 8️⃣ Email Download Form (Subscribe & Auto Download with Spinner)
+  const subscribeForm = document.getElementById("subscribeForm");
+  const emailInput = document.getElementById("emailInput");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const responseMsg = document.getElementById("responseMsg");
 
-  expNext?.addEventListener("click", () => {
-    expIndex = (expIndex + 1) % expSlides.length;
-    showExpSlide(expIndex);
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Store original button text
+      const originalText = downloadBtn.textContent;
+
+      // Disable button and show spinner
+      downloadBtn.disabled = true;
+      downloadBtn.innerHTML = `
+      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+      Sending...
+    `;
+
+      try {
+        const res = await fetch("http://localhost:5000/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: emailInput.value }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          responseMsg.textContent = "✅ " + data.message;
+          responseMsg.style.color = "limegreen";
+
+          // Trigger file download automatically
+          const link = document.createElement("a");
+          link.href =
+            "https://drive.google.com/uc?export=download&id=1y2ga6i8JenJZcwopHOU8i2m2Ca4o2qSB"; // ✅ Direct download link
+          link.download = "AdBorn_Solutions_2025_Marketing_Guide.pdf"; // 📄 optional rename
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          responseMsg.textContent = "⚠️ " + data.message;
+          responseMsg.style.color = "orange";
+        }
+      } catch (error) {
+        console.error("Error submitting email:", error);
+        responseMsg.textContent = "❌ Server error. Please try again later.";
+        responseMsg.style.color = "red";
+      } finally {
+        // Re-enable button and restore text
+        downloadBtn.disabled = false;
+        downloadBtn.textContent = originalText;
+        emailInput.value = "";
+      }
+    });
+  }
+  // 8️⃣ Marketing Guide Direct Download
+const guideBtn = document.querySelector(".btn-guide");
+
+if (guideBtn) {
+  guideBtn.addEventListener("click", () => {
+    // Create a hidden link for download
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/uc?export=download&id=1y2ga6i8JenJZcwopHOU8i2m2Ca4o2qSB"; // ✅ Your Drive direct download link
+    link.download = "AdBorn_Solutions_2025_Marketing_Guide.pdf"; // 📄 Rename if desired
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
-
-  expPrev?.addEventListener("click", () => {
-    expIndex = (expIndex - 1 + expSlides.length) % expSlides.length;
-    showExpSlide(expIndex);
-  });
-
-  // Auto-slide every 5 seconds
-  setInterval(() => {
-    expIndex = (expIndex + 1) % expSlides.length;
-    showExpSlide(expIndex);
-  }, 5000);
 }
 
 });
-
-
-
-

@@ -140,12 +140,26 @@
           <p>
             Practical strategies and proven tactics to help you scale your <br>business in the year ahead.
           </p>
-          <form class="d-flex align-items-center mt-3 unlock-p ">
-            <input type="email" class="form-control mb-3" placeholder="Enter Your Email" />
-            <button type="submit" class="btn btn-download mb-3">
-              DOWNLOAD FOR FREE
-            </button>
-          </form>
+          <form
+  id="subscribeForm"
+  class="d-flex align-items-center mt-3 unlock-p flex-column flex-sm-row gap-2"
+>
+  <input
+    type="email"
+    id="emailInput"
+    class="form-control mb-3 flex-grow-1"
+    placeholder="Enter Your Email"
+    required
+  />
+  <button
+    type="submit"
+    id="downloadBtn"
+    class="btn btn-download mb-1 ms-3"
+  >
+    DOWNLOAD 
+  </button>
+  <p id="responseMsg" class="mt-2 text-center w-100" style="font-size: 14px;"></p>
+</form>
         </div>
         <img src="Images/user.jpg" alt="user" class="user-img" />
       </div>
