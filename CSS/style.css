@@ -2260,7 +2260,7 @@ span.highlight-2 {
 }
 
 .high-card2 {
-  background-image: url("../Images/sol-2.png");
+  background-image: url("../Images/avibha.png");
   background-size: cover;
   background-position: center;
   height: 270px;
@@ -2282,7 +2282,7 @@ span.highlight-2 {
 }
 
 .high-card3 {
-  background-image: url("../Images/sol-3.png");
+  background-image: url("../Images/office1.png");
   background-size: cover;
   background-position: center;
   height: 270px;
@@ -2301,6 +2301,7 @@ span.highlight-2 {
   display: flex;
   align-items: center;
   gap: 10px;
+ 
 }
 
 .high-card4 img {
@@ -2791,100 +2792,79 @@ width:20px; */
 }
 
 /* Client Section - Full Width White Background */
+/* Section */
 .client-section {
-  background-color: #ffffff;
-  /* Full width white background */
-  text-align: center;
   padding: 60px 20px;
-}
-
-#indexexplore-btn {
-  height: 60PX;
-  width: 260PX;
-  color: white;
-  font-size: 25px;
-  background: linear-gradient(90deg, #1ed670, #4b37bb);
-  border-radius: 20px;
-  border: none;
-}
-
-#indexexplore-btn:hover {
-  height: 60PX;
-  width: 260PX;
-  color: white;
-  font-size: 25px;
-  background: linear-gradient(90deg, #4b37bb, #1ed670);
-  border-radius: 20px;
-  border: none;
+  background: #fff;
+  text-align: center;
 }
 
 .client-heading {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
   margin-bottom: 40px;
-  color: black;
 }
 
 /* Grid Layout */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /* 6 per row on large screens */
-  gap: 50px;
-  /* border-top: 2px solid #000;
-  border-left: 2px solid #000; */
-  background-color: #ffffff;
-  max-width: 1100px;
-  /* keep grid centered */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Circle container */
-.client-circle {
-  width: 80px;
-  height: 80px;
+/* Circles */
+/* .client-circle {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: #D9D9D9;
-  /* fallback bg if no logo */
-  /* margin: auto; */
-  margin-top: 20px;
-  /* border-right: 2px solid #000;
-  border-bottom: 2px solid #000; */
+  background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* ensures logos stay inside circle */
+  transition: transform 0.3s ease;
+} */
+
+.client-circle:hover {
+  transform: scale(1.05);
 }
 
-/* Logo images inside circles */
+/* Images inside circles */
 .client-circle img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
-  /* keep logo aspect ratio */
   border-radius: 50%;
-  /* makes logos circular */
 }
 
-/* =====================
-   Responsive Breakpoints
-   ===================== */
-
-/* Tablet (≤ 992px) → 3 per row */
-@media (max-width: 992px) {
+/* Responsive Tweaks */
+@media (max-width: 768px) {
   .client-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 25px;
   }
 }
 
-/* Mobile (≤ 576px) → 2 per row */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .client-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .client-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .client-heading {
+    font-size: 1.3rem;
   }
 }
-
 
 /* ------------------blog page------------- */
 .blog {
@@ -8044,4 +8024,131 @@ section */
    .web-para{
     font-size:12px;
    }
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-banner h1.about-top {
+    font-size: 2.3rem;
+  }
+
+  .about-banner p {
+    font-size: 1rem;
+    padding: 0 5%;
+  }
+
+ 
+}
+
+/* Mobile Devices */
+@media (max-width: 576px) {
+  .about-banner {
+    padding: 60px 5%;
+  }
+
+  .about-banner h1.about-top {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-banner p {
+    font-size: 0.95rem;
+  }
+
+  .about-btn {
+    flex-direction: column;
+    gap: 15px;
+    margin-top:20px;
+  }
+
+  .about-btn a {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+.about-btn a:nth-of-type(2){
+  margin-top:20px;
+  margin-left:30px;
+}
+  /* ---------- Responsive ---------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .high-card4 {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .high-card4 img {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .high-card4 p {
+    font-size: 1rem;
+  }
+
+  .btn-guide {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .high-card4 {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 15px;
+  }
+
+  .high-card4 img {
+    width: 120px;
+  }
+
+  .high-card4 p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  .btn-guide {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-top:60px;
+  }
+  .mission-2 img{
+    height:300px;
+  }
+}
+
+}
+/* Responsive fix for mobile */
+@media (max-width: 576px) {
+  /* Stack slides vertically on mobile */
+  .testimonial-swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  /* Make each slide take full width */
+  .testimonial-swiper .swiper-slide {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Hide swiper navigation arrows on mobile (optional) */
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+  .main-content {
+  padding-top: 0px; /* same height as navbar */
+}
 }
