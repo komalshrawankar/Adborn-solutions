@@ -12,9 +12,164 @@ body {
 .main-content {
   padding-top: 80px; /* same height as navbar */
 }
+/* final changes  */
+/* Default desktop view stays same */
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .career-review {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .b2b-hero{
+    margin-top:200px;
+  }
+  .seo-banner span{
+    width:100% !important;
+    margin-top:30px;
+  }
+  .cutting-edge{
+    margin: bottom 0px !important;;
+  }
+  .growth-seo p{
+    font-size:15px;
+  }
+  .email-banner-img{
+    margin-top : 100px !important;;
+  }
+  .card1{
+   margin-top:10px !important;
+   }
+  .career-review .col-5 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .buisness-text p{
+    font: size 15px !important;;
+  }
+  .work-img img {
+    width: 180px;
+    height: auto;
+  }
+
+  .career-review h5 {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .career-review p {
+    font-size: 0.9rem;
+  }
+  .highlight-text{
+    font: size 30px !important;;
+  }
+ 
+}
+
+/* ------------- MOBILE VIEW ------------- */
+@media (max-width: 768px) {
+  .card-learn{
+    height:200px;
+  }
+  .career-form {
+    padding: 20px;
+    margin: 0 10px;
+    width:320px;
+    margin-right:30px;
+  }
+
+  .form-header img {
+    width: 100px;
+    margin: 0 auto 15px auto;
+  }
+
+  .form-header h2 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Make labels smaller */
+  .career-form label {
+    font-size: 14px;
+  }
+
+  .career-form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Radio buttons vertical on mobile */
+  .radio-group {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .radio-group label {
+    font-size: 14px;
+  }
+
+  .career-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Make industry hero images larger on mobile */
+@media (max-width: 576px) {
+  
+  /* Force each image to take full width */
+  .industry-mobile-view .col-lg-6 .col-6 {
+      width: 100% !important;
+  }
+  .card-learn{
+    height: 200px !important;;
+  }
+  .email-banner-img{
+    margin-top :150px !important;;
+  }
+  .industry-mobile-view img {
+      width: 90% !important;
+      height: auto;
+      border-radius: 12px; /* optional */
+  }
+
+  /* Stack the right column images properly */
+  .indo-shape .d-flex {
+      flex-direction: column !important;
+      gap: 20px;
+  }
+
+  .indo-shape .d-flex.flex-column {
+      width: 100% !important;
+  }
+}
 
 /* ---------- Desktop (default) ---------- */
 
+/* ===========================
+   Mega Menu Hover + Animation
+   Desktop Only
+   =========================== */
+@media (min-width: 992px) {
+
+     /* default hidden state */
+   .navbar .dropdown-menu {
+      display: block;              /* always in DOM, but hidden visually */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 0.25s ease;
+  }
+
+  /* when .show is on .dropdown (we will add via JS) */
+  .navbar .dropdown.show .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+  }
+}
 
   
 /* new navbar */
@@ -101,18 +256,44 @@ body {
 
 
         @media (max-width: 992px) {
-           .navbar {
-    position: relative;
+           /* wrapper of navbar */
+  #header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+  }
+    #header.navbar {
+    position: fixed;
      border-radius: 30px;
     width: 90%;
-    left: 20px;
+    left:0;
     transform: none;
     border-radius: 0;
     top:0;
-    margin-top:20px;
+    right:0;
+    margin:0px;
+    padding: 8px 16px;  
     border-radius:30px;
   }
+   .bg-section {
+    padding-top: 70px;      /* approx equal to navbar height */
+  }
+.hero-text {
+  position: relative;
+  margin-bottom: 80px;
+  margin-left:50px;
+}
 
+.hero-text::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: -30px;
+  left: -40px;
+  display:none;
+  background-repeat: no-repeat;
+}
   .dropdown-menu.mega-menu {
     position: static !important; /* Let it flow inside collapsible menu */
     transform: none !important;
@@ -1909,6 +2090,7 @@ span.highlight-2 {
   font-weight: bold;
   border-radius: 0px;
   color: black;
+  display:none;
 }
 
 .form-card {
@@ -2071,7 +2253,19 @@ span.highlight-2 {
     flex-direction: column;
     height: auto;
   }
-
+.review-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-right:30px;
+ 
+}
+.testimonial-heading{
+  display:none;
+}
+.testimonial-section {
+  display:none;
+}
   .user-img {
     margin-top: 30px;
   }
@@ -2106,7 +2300,7 @@ span.highlight-2 {
   font-weight: 500;
 }
 .about-top{
-  margin-top:120px;
+  margin-top:150px;
 }
 
 .about-banner p {
@@ -2260,7 +2454,7 @@ span.highlight-2 {
 }
 
 .high-card2 {
-  background-image: url("../Images/avibha.png");
+  background-image: url("../Images/about-co-founder.png");
   background-size: cover;
   background-position: center;
   height: 270px;
@@ -2282,7 +2476,7 @@ span.highlight-2 {
 }
 
 .high-card3 {
-  background-image: url("../Images/office1.png");
+  background-image: url("../Images/about-director.png");
   background-size: cover;
   background-position: center;
   height: 270px;
@@ -2445,6 +2639,9 @@ width:20px; */
   .read-article {
     justify-content: center;
   }
+  .about-top{
+  margin-top:20px;
+}
 }
 
 .custom-prev {
@@ -3967,7 +4164,9 @@ width:20px; */
     flex-direction: column;
     height: auto;
   }
-
+  .impact-text{
+    text-align:start;
+  }
   .user-img {
     margin-top: 30px;
   }
@@ -3982,7 +4181,7 @@ width:20px; */
   }
 
   .card-custom {
-    height: 300px;
+    height: 200px;
   }
 
   .testimonial-section {
@@ -4046,7 +4245,7 @@ width:20px; */
 .seo-col h1 {
   font-weight: 500;
   font-size: 50px;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .seo-col2 h1 {
@@ -4665,6 +4864,11 @@ width:20px; */
   .industry-list li {
     flex: 0 0 50%;
   }
+  .web-head {
+   margin-top: 170px!important;
+  }
+
+
 }
 
 
@@ -4814,7 +5018,7 @@ width:20px; */
 }
 
 .web-head {
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 
@@ -5668,8 +5872,11 @@ a.listen-btn:hover i.fa-circle-play {
 
   /* hide arrows on mobile */
   .career-hero {
-    margin-top: 60px;
+    margin-top: 10px;
   }
+  .parent-class h1 {
+  font-size: 30px;
+}
 }
 
 .parent-class h1 {
@@ -5887,7 +6094,12 @@ a.listen-btn:hover i.fa-circle-play {
   .career-form {
     padding: 20px;
   }
-
+ .work-img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  display: block;
+}
   .career-form .form-header h2 {
     font-size: 16px;
   }
@@ -5895,7 +6107,7 @@ a.listen-btn:hover i.fa-circle-play {
 
 @media (max-width: 800px) {
   .career-form {
-    max-width: 100%;
+    max-width: 80%;
     /* removes 200px margins on small screens */
     margin: 20px;
   }
@@ -6451,7 +6663,7 @@ a.listen-btn:hover i.fa-circle-play {
   }
   .seo-banner h1 {
     font-size: 1.2rem;
-    margin-top:100px;
+    margin-top:0px;
   }
 
   .email-para {
@@ -6722,7 +6934,7 @@ a.listen-btn:hover i.fa-circle-play {
 /* index.html responsive */
 /* 🔹 Responsive Tweaks */
 @media (max-width: 992px) {
-  .hero-text {
+  .hero-text h1{
     font-size: 2.4rem;
     text-align: center;
   }
@@ -6745,7 +6957,9 @@ a.listen-btn:hover i.fa-circle-play {
     min-height: auto;
     padding: 60px 0;
   }
-
+  .consaltant-btn{
+    display:none;
+  }
   .hero-text {
     /* font-size: 2rem; */
     margin-top:50px;
@@ -6757,8 +6971,11 @@ a.listen-btn:hover i.fa-circle-play {
   background-position: center;
   margin-left: 30px; /* ✅ correct */
   font-size:1.2rem;
+ padding-right:20px;
 }
-
+.hero-text h1{
+  font-size:2rem !important;
+}
   .subheading {
     font-size: 1rem;
     padding: 0 10px;
@@ -6873,6 +7090,7 @@ a.listen-btn:hover i.fa-circle-play {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+    display:none;
   }
 
   .avatar {
@@ -6882,6 +7100,9 @@ a.listen-btn:hover i.fa-circle-play {
     padding: 6px;
     margin-left: 0;
     line-height: 1.1;
+    margin-top:20px;
+    margin-bottom:20px;
+    
   }
 
   /* show Komal on mobile only */
@@ -7030,7 +7251,10 @@ a.listen-btn:hover i.fa-circle-play {
   .download-section {
     padding: 40px 10px;
   }
-
+  .btn-conquer{
+    display:none;
+  }
+ 
   .download-section .fs-1 {
     font-size: 1.5rem; /* heading */
   }
@@ -7060,7 +7284,14 @@ a.listen-btn:hover i.fa-circle-play {
     font-size: 0.9rem;
   }
   .new-s{
-    width:90%;
+    width:100%;
+    font-size:20px;
+  }
+}
+@media (max-width: 576px) {
+  .new-s.fs-1,
+  .highlight_new.fs-1 {
+    font-size: 1.5rem !important;   /* or any size you want */
   }
 }
 
@@ -7084,11 +7315,18 @@ a.listen-btn:hover i.fa-circle-play {
     font-size: 1.5rem;
     padding: 0 10px;
     line-height: 1.3;
+    margin-top:20px;
   }
   .seo-high{
     font-size:30px;
   }
-
+   .drive-seo2{
+    display:none ;
+   }
+   .card-b2b p{
+    text-align:center;
+    margin-left:30px;
+   }
   .col-12 blockquote {
     font-size: 0.85rem;
     line-height: 1.4;
@@ -7476,16 +7714,54 @@ a.listen-btn:hover i.fa-circle-play {
   }
 }
 /* our people pagev
+
+
 section */
 /* =========================
    Responsive Banner Section
    ========================= */
+
+ @media (max-width: 768px) {
+
+  .expert-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .expert-column .box1 {
+    width: 100%;
+    aspect-ratio: 1/1.3; /* perfect rectangle shape */
+    border-radius: 16px;
+    overflow: hidden;
+    background: #222;
+  }
+
+  .expert-column .box1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Text section fix */
+  .text-column {
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+ 
 @media only screen and (max-width: 992px) {
   .people1-banner {
     height: auto;
-    padding: 50px 0;
+    padding: 80px 0;
+    margin-top:100px;
   }
-
+ .expert-300{
+  width:300px;
+  height:300px;
+ }
   .pb-div1,
   .pb-div2,
   .pb-div3 {
@@ -7495,6 +7771,7 @@ section */
     text-align: center;
     width: 100%;
     gap: 1.5rem;
+    
   }
 
   .pb-div1 img,
@@ -7736,7 +8013,7 @@ section */
   }
 
   .col-lg-6 img {
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
   }
   .heading{
@@ -7771,10 +8048,32 @@ section */
   .service-card {
     padding: 20px;
   }
+  .industry-mobile-view{
+    padding-top: 90px !important;;
+  }
+}
+@media (max-width: 576px) {
+  .services-section .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* Mobiles (≤576px) */
 @media (max-width: 576px) {
+   .services-section .row {
+    justify-content: center !important;
+  }
+
+  .services-section .col-sm-6 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .services-section .service-card {
+    width: 90% !important;   /* less width so it's visually centered */
+    margin: 0 auto;
+  }
   .services-heading {
     font-size: 24px;
     text-align: center;
@@ -8020,6 +8319,7 @@ section */
   }
   .web-head{
    font-size:18px;
+   margin-top:100px;
   }
    .web-para{
     font-size:12px;
@@ -8035,8 +8335,10 @@ section */
   }
 
   .about-banner p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0 5%;
+    justify-content:center;
+    text-align:center;
   }
 
  
@@ -8047,7 +8349,13 @@ section */
   .about-banner {
     padding: 60px 5%;
   }
-
+.web-para{
+    font-size:12px;
+    display:none;
+   }
+   .web-dev-btn{
+    display:none;
+   }
   .about-banner h1.about-top {
     font-size: 1.8rem;
     text-align: center;
@@ -8055,6 +8363,7 @@ section */
 
   .about-banner p {
     font-size: 0.95rem;
+    text-align:center;
   }
 
   .about-btn {

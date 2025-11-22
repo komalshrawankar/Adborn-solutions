@@ -141,7 +141,7 @@ function loadHTML(file, elementId, callback) {
 }
 
 // Load other sections
-loadHTML("header.html", "header");
+loadHTML("header.html", "header",initNavbarHover);
 // Loading footer dynamically
 loadHTML("footer.html", "footer", () => {
   console.log("Footer loaded!");
@@ -628,6 +628,44 @@ function initBookForm() {
     }, 5000);
   }
 }
+
+function initNavbarHover() {
+  // Desktop only
+  if (window.innerWidth < 992) return;
+
+  console.log("🔽 initNavbarHover running...");
+
+  document.querySelectorAll('#header .navbar .dropdown').forEach(function (dropdownItem) {
+
+    const toggle = dropdownItem.querySelector('.dropdown-toggle');  // arrow
+    const menu   = dropdownItem.querySelector('.dropdown-menu');   // mega menu
+
+    if (!toggle || !menu) return;
+
+    const showMenu = () => dropdownItem.classList.add('show');
+    const hideMenu = () => dropdownItem.classList.remove('show');
+
+    // show when arrow hovered
+    toggle.addEventListener('mouseenter', showMenu);
+
+    // keep open when hovering menu
+    menu.addEventListener('mouseenter', showMenu);
+
+    // hide when leaving menu
+    menu.addEventListener('mouseleave', hideMenu);
+
+    // hide when leaving arrow (if not entering menu)
+    toggle.addEventListener('mouseleave', function () {
+      setTimeout(() => {
+        if (!menu.matches(':hover') && !toggle.matches(':hover')) {
+          hideMenu();
+        }
+      }, 80);
+    });
+
+  });
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ script.js loaded successfully");
