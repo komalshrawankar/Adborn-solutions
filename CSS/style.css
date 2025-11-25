@@ -14,6 +14,19 @@ body {
 }
 /* final changes  */
 /* Default desktop view stays same */
+@media (max-width: 576px) {
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers h2 + badge */
+    text-align: center;    /* centers the text */
+  }
+
+  .badge-role {
+    margin-top: 5px;
+    display: inline-block;
+  }
+}
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
@@ -291,7 +304,7 @@ body {
   width: 120px;
   top: -30px;
   left: -40px;
-  display:none;
+  /* display:none; */
   background-repeat: no-repeat;
 }
   .dropdown-menu.mega-menu {
@@ -1189,6 +1202,9 @@ span.highlight-2 {
   .exp-left, .exp-right {
     flex: 1 1 100%;
     border-right: none;
+  }
+  .badge-role{
+    text-align:center;
   }
 }
 
@@ -2227,8 +2243,12 @@ span.highlight-2 {
 
 @media only screen and (max-width: 600px) {
   .custom-card {
+    display: flex;
     flex-direction: column;
-    height: auto;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    gap: 15px;
   }
 .review-text {
   font-size: 1.1rem;
@@ -2262,6 +2282,40 @@ span.highlight-2 {
 
   .testimonial-section {
     margin: 0;
+  }
+  .unlock h4 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .unlock p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .unlock input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-download {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    padding: 10px 0;
+  }
+
+  .user-img {
+    width: 140px;
+    margin-top: 20px;
+  }
+
+  .unlock {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -3457,6 +3511,22 @@ width:20px; */
 .highlight-green {
   color: #00ff99;
 }
+@media (max-width: 576px) {
+  .pricing-title {
+    font-size: 1.6rem !important;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 576px) {
+  .meet-1 h4,
+  .meet-1 span {
+    width: 90%;
+    display: block;
+    margin: 0 auto;   /* centers them */
+    text-align: left; /* optional → remove if you want centered */
+  }
+}
 
 /* .highlight-blue {
  background: linear-gradient(90deg,#7674EB 20%,#9696C4);
@@ -4144,6 +4214,10 @@ width:20px; */
   .impact-text{
     text-align:start;
   }
+  .meet-1 h4 {
+  width: 80%;
+  display: flex;
+}
   .user-img {
     margin-top: 30px;
   }
@@ -6911,10 +6985,7 @@ a.listen-btn:hover i.fa-circle-play {
 /* index.html responsive */
 /* 🔹 Responsive Tweaks */
 @media (max-width: 992px) {
-  .hero-text h1{
-    font-size: 2.4rem;
-    text-align: center;
-  }
+  
 
   .subheading {
     text-align: center;
@@ -6934,12 +7005,15 @@ a.listen-btn:hover i.fa-circle-play {
     min-height: auto;
     padding: 60px 0;
   }
-  .consaltant-btn{
+    .consaltant-btn{
     display:none;
   }
-  .hero-text {
-    /* font-size: 2rem; */
-    margin-top:50px;
+   .hero-text {
+    font-size: 1.4rem !important; /* change size here */
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
   }
   .hero-text {
   /* background-image: url("../Images/banner-lines.png"); */
@@ -6947,12 +7021,12 @@ a.listen-btn:hover i.fa-circle-play {
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 30px; /* ✅ correct */
-  font-size:1.2rem;
+ font-size:2.0rem !important;
  padding-right:20px;
 }
-.hero-text h1{
-  font-size:2rem !important;
-}
+.highlight-blue1 {
+    font-size: 1.3rem !important; /* reduce span size too */
+  }
   .subheading {
     font-size: 1rem;
     padding: 0 10px;
@@ -7002,6 +7076,8 @@ a.listen-btn:hover i.fa-circle-play {
 
   .user-img {
     width: 150px;
+    height:150px;
+
   }
   .unlock{
     margin-left:0px;
@@ -7618,6 +7694,12 @@ a.listen-btn:hover i.fa-circle-play {
   /* Image sizing */
 
 }
+/* Hide all <br> tags on mobile */
+@media (max-width: 576px) {
+  br {
+    display: none;
+  }
+}
 
 /* channel box */
 /* ===== RESPONSIVE DESIGN ===== */
@@ -7628,7 +7710,9 @@ a.listen-btn:hover i.fa-circle-play {
     flex-direction:row;
     
   }
-
+  .case-card h6{
+    display:none;
+  }
   .channel-box {
     margin: 10px 0;
     padding: 12px 20px;
@@ -7662,6 +7746,7 @@ a.listen-btn:hover i.fa-circle-play {
   }
   .col-12 {
     text-align: center;
+   
   }
   .star-section2{
    font-size:15px;
